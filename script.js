@@ -4,15 +4,6 @@
 // ==========================================
 
 
-// ==========================================
-// WEB3FORMS
-// ==========================================
-
-const WEB3FORMS_ACCESS_KEY =
-    "0ae4638e-e970-43f1-8079-046f388583ee";
-
-const WEB3FORMS_URL =
-    "https://api.web3forms.com/submit";
 
 
 // ==========================================
@@ -1562,42 +1553,12 @@ function prepareFormData(
 
 
     // ======================================
-    // ACCESS KEY
-    // ======================================
-
-    formData.append(
-        "access_key",
-        WEB3FORMS_ACCESS_KEY
-    );
-
-
-    // ======================================
     // ID
     // ======================================
 
     formData.append(
         "application_id",
         applicationId
-    );
-
-
-    // ======================================
-    // ASSUNTO
-    // ======================================
-
-    formData.append(
-        "subject",
-        `[Kael Thera] Nova inscrição — ${applicationId}`
-    );
-
-
-    // ======================================
-    // NOME DO REMETENTE
-    // ======================================
-
-    formData.append(
-        "from_name",
-        "Kael Thera SMP"
     );
 
 
@@ -1622,90 +1583,13 @@ function prepareFormData(
     );
 
 
-    // ======================================
-    // MENSAGEM ORGANIZADA
-    // ======================================
-
-    formData.append(
-        "message",
-        generateEmailMessage(
-            applicationId
-        )
-    );
-
-
     return formData;
 
 }
 
 
 // ==========================================
-// ENVIAR PARA WEB3FORMS
-// ==========================================
-
-async function sendToWeb3Forms(
-    applicationId
-) {
-
-    const formData =
-        prepareFormData(
-            applicationId
-        );
-
-
-    const response =
-        await fetch(
-            WEB3FORMS_URL,
-            {
-                method: "POST",
-
-                headers: {
-                    "Accept":
-                        "application/json"
-                },
-
-                body: formData
-            }
-        );
-
-
-    let result;
-
-
-    try {
-
-        result =
-            await response.json();
-
-    } catch (error) {
-
-        throw new Error(
-            "O servidor retornou uma resposta inválida."
-        );
-
-    }
-
-
-    if (
-        !response.ok ||
-        !result.success
-    ) {
-
-        throw new Error(
-            result.message ||
-            "Não foi possível enviar a inscrição."
-        );
-
-    }
-
-
-    return result;
-
-}
-
-
-// ==========================================
-// ENVIAR PARA GOOGLE SHEETS
+// ENVIAR PARA GOOGLE SHEETS — FONTE OFICIAL
 // ==========================================
 
 async function sendToGoogleSheets(
@@ -1839,14 +1723,6 @@ form.addEventListener(
 
 
         try {
-
-            // ==================================
-            // WEB3FORMS
-            // ==================================
-
-            await sendToWeb3Forms(
-                applicationId
-            );
 
 
             // ==================================
