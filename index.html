@@ -3,1179 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Kael'Thera SMP — Inscrição de Player</title>
-
+    <meta name="theme-color" content="#08090d">
+    <title>Kael'Thera SMP — Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body id="top">
-
+<body id="top" class="portal-page">
 <div class="background"></div>
 
-<header class="site-header">
-    <a class="brand" href="#top" aria-label="Kael'Thera SMP">
+<header class="site-header portal-header">
+    <a class="brand" href="index.html" aria-label="Kael'Thera SMP — Início">
         <span class="brand-mark">✦</span>
         <span class="brand-copy">
             <strong>KAEL'THERA</strong>
-            <small>SMP</small>
+            <small>PORTAL</small>
         </span>
     </a>
 
+    <nav class="top-nav" aria-label="Navegação principal">
+        <a class="active" href="index.html">Início</a>
+        <a href="player.html">Player</a>
+        <a href="staff.html">Staff</a>
+        <a href="sentimentos.html">Sentimentos</a>
+    </nav>
+
     <div class="header-meta">
         <span class="live-dot"></span>
-        Inscrições abertas
+        Portal online
     </div>
 </header>
 
-
-<main class="container">
-
-    <!-- CABEÇALHO -->
-
-    <section class="intro">
-        <div class="hero-kicker">
-            <span></span>
-            PROCESSO DE SELEÇÃO • KAEL'THERA SMP
-        </div>
-
+<main class="portal-shell">
+    <section class="portal-hero">
+        <div class="hero-kicker"><span></span> PORTAL OFICIAL • KAEL'THERA SMP</div>
         <div class="symbol" aria-hidden="true">✦</div>
 
-        <h1>
-            Sua história começa
-            <span>antes de entrar no mundo.</span>
-        </h1>
+        <h1>Toda história começa <span>com uma escolha.</span></h1>
 
         <p class="hero-description">
-            Esta inscrição é o primeiro capítulo da sua jornada no Kael'Thera.
-            Queremos conhecer o jogador, o personagem e as histórias que você
-            pretende construir ao lado da comunidade.
+            Este é o ponto de entrada para os processos oficiais do Kael'Thera.
+            Escolha abaixo o tipo de formulário que deseja acessar.
         </p>
 
-        <div class="hero-badges" aria-label="Características do servidor">
-            <span>✦ Roleplay</span>
-            <span>✦ Lore viva</span>
-            <span>✦ Comunidade</span>
-            <span>✦ Mundo persistente</span>
-        </div>
-
-        <div class="hero-note">
-            <div class="hero-note-icon">◎</div>
+        <div class="portal-status">
             <div>
-                <strong>Antes de começar</strong>
-                <p>
-                    Reserve alguns minutos e responda com cuidado.
-                    Campos obrigatórios precisam ser concluídos antes de avançar.
-                </p>
+                <span class="status-dot"></span>
+                <strong>Sistema operacional</strong>
             </div>
+            <p>Os formulários salvam rascunhos localmente para evitar perda de progresso.</p>
         </div>
     </section>
 
-
-    <!-- PROGRESSO -->
-
-    <section class="progress-container">
-
-        <div class="progress-info">
-
-            <span>
-                Etapa <strong id="stepNumber">1</strong> de 8
-            </span>
-
-            <span id="stepTitle">
-                Identificação
-            </span>
-
-        </div>
-
-        <div class="progress-bar">
-
-            <div
-                class="progress-fill"
-                id="progressFill">
+    <section class="portal-section">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">FORMULÁRIOS</span>
+                <h2>Escolha seu caminho</h2>
             </div>
-
+            <p>Cada área possui identidade própria dentro do portal.</p>
         </div>
 
+        <div class="portal-grid">
+            <a class="portal-card portal-card-player" href="player.html">
+                <div class="portal-card-glow"></div>
+                <div class="portal-card-top">
+                    <span class="portal-card-icon">◈</span>
+                    <span class="portal-card-badge is-open">ABERTO</span>
+                </div>
+                <div class="portal-card-body">
+                    <span class="portal-card-type">PLAYER</span>
+                    <h3>Inscrição para o SMP</h3>
+                    <p>Conte quem você é, apresente seu personagem e mostre que tipo de história quer construir em Kael'Thera.</p>
+                </div>
+                <div class="portal-card-footer">
+                    <span>8 etapas</span>
+                    <strong>Acessar formulário →</strong>
+                </div>
+            </a>
+
+            <a class="portal-card portal-card-staff" href="staff.html">
+                <div class="portal-card-glow"></div>
+                <div class="portal-card-top">
+                    <span class="portal-card-icon">◆</span>
+                    <span class="portal-card-badge is-open">ABERTO</span>
+                </div>
+                <div class="portal-card-body">
+                    <span class="portal-card-type">STAFF</span>
+                    <h3>Candidatura para equipe</h3>
+                    <p>Área reservada para processos seletivos da equipe: moderação, suporte, lore, construção, eventos e técnico.</p>
+                </div>
+                <div class="portal-card-footer">
+                    <span>6 etapas</span>
+                    <strong>Acessar formulário →</strong>
+                </div>
+            </a>
+
+            <a class="portal-card portal-card-feeling" href="sentimentos.html">
+                <div class="portal-card-glow"></div>
+                <div class="portal-card-top">
+                    <span class="portal-card-icon">✦</span>
+                    <span class="portal-card-badge is-open">ABERTO</span>
+                </div>
+                <div class="portal-card-body">
+                    <span class="portal-card-type">SENTIMENTOS</span>
+                    <h3>Avaliação de Sentimento</h3>
+                    <p>Escolha um dos doze Sentimentos ou deixe a Staff avaliar seu perfil por meio das respostas e da entrevista.</p>
+                </div>
+                <div class="portal-card-footer">
+                    <span>8 etapas</span>
+                    <strong>Acessar avaliação →</strong>
+                </div>
+            </a>
+        </div>
     </section>
 
-    <div class="form-guidance" id="formGuidance" role="status" aria-live="polite">
-        <span class="guidance-icon">●</span>
-        <span>Preencha os campos obrigatórios desta etapa para continuar.</span>
-    </div>
-
-
-    <!-- FORMULÁRIO -->
-
-    <form id="playerForm">
-
-    <!-- Honeypot anti-spam -->
-	
-    <div class="hidden" aria-hidden="true">
-    <label for="website">Website</label>
-    <input
-        type="text"
-        id="website"
-        name="website"
-        tabindex="-1"
-        autocomplete="off"
-    >
-</div>
-
-        <!-- ========================================= -->
-        <!-- ETAPA 1 -->
-        <!-- ========================================= -->
-
-        <section class="form-step active" data-step="1">
-
-            <div class="step-header">
-
-                <span class="step-icon">👤</span>
-
-                <div>
-                    <h2>Identificação</h2>
-                    <p>Primeiro, queremos saber quem está por trás do personagem.</p>
-                </div>
-
-            </div>
-
-
-            <div class="grid">
-
-                <div class="field">
-
-                    <label for="nickname">
-                        Nickname do Minecraft *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nickname"
-                        name="nickname"
-                        placeholder="Ex: Kaelzinho"
-                        required>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="discord">
-                        Usuário do Discord *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="discord"
-                        name="discord"
-                        placeholder="Ex: kaelzin"
-                        required>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="discordUserId">
-                        Discord User ID *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="discordUserId"
-                        name="discordUserId"
-                        inputmode="numeric"
-                        pattern="[0-9]{17,20}"
-                        placeholder="Ex: 123456789012345678"
-                        minlength="17"
-                        maxlength="20"
-                        required>
-
-                    <small>
-                        Ative o Modo Desenvolvedor no Discord, clique com o botão direito no seu perfil e escolha "Copiar ID do usuário".
-                    </small>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="age">
-                        Idade *
-                    </label>
-
-                    <input
-                        type="number"
-                        id="age"
-                        name="age"
-                        min="13"
-                        max="100"
-                        placeholder="Ex: 18"
-                        required>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>
-                        Há quanto tempo joga Minecraft? *
-                    </label>
-
-                    <div class="radio-group">
-
-                        <label class="option">
-                            <input type="radio" name="minecraftTime" value="menos1" required>
-                            Menos de 1 ano
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="minecraftTime" value="1a3">
-                            1–3 anos
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="minecraftTime" value="3a6">
-                            3–6 anos
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="minecraftTime" value="6mais">
-                            Mais de 6 anos
-                        </label>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="minecraftExperience">
-                    Conte brevemente sobre sua experiência no Minecraft *
-                </label>
-
-                <textarea
-                    id="minecraftExperience"
-                    name="minecraftExperience"
-                    placeholder="Você joga mais survival? Já participou de SMPs? Gosta de construir, explorar, lutar, fazer farms..."
-                    required></textarea>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================= -->
-        <!-- ETAPA 2 -->
-        <!-- ========================================= -->
-
-        <section class="form-step" data-step="2">
-
-            <div class="step-header">
-
-                <span class="step-icon">🎮</span>
-
-                <div>
-                    <h2>Perfil de jogador</h2>
-                    <p>Queremos entender como você costuma jogar.</p>
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    O que você mais gosta de fazer no Minecraft? *
-                </label>
-
-                <div class="checkbox-grid">
-
-                    <label class="option">
-                        <input type="checkbox" name="playStyle" value="construção">
-                        🏗️ Construção
-                    </label>
-
-                    <label class="option">
-                        <input type="checkbox" name="playStyle" value="exploração">
-                        🧭 Exploração
-                    </label>
-
-                    <label class="option">
-                        <input type="checkbox" name="playStyle" value="redstone">
-                        ⚙️ Redstone
-                    </label>
-
-                    <label class="option">
-                        <input type="checkbox" name="playStyle" value="farms">
-                        🌾 Farms
-                    </label>
-
-                    <label class="option">
-                        <input type="checkbox" name="playStyle" value="pvp">
-                        ⚔️ PvP
-                    </label>
-
-                    <label class="option">
-                        <input type="checkbox" name="playStyle" value="roleplay">
-                        🎭 Roleplay
-                    </label>
-
-                    <label class="option">
-                        <input type="checkbox" name="playStyle" value="aventura">
-                        🗺️ Aventuras
-                    </label>
-
-                    <label class="option">
-                        <input type="checkbox" name="playStyle" value="social">
-                        🤝 Socialização
-                    </label>
-
-                </div>
-
-                <small>Selecione pelo menos uma opção.</small>
-
-            </div>
-
-
-            <div class="grid">
-
-                <div class="field">
-
-                    <label>
-                        Como você avalia sua construção? *
-                    </label>
-
-                    <div class="radio-group">
-
-                        <label class="option">
-                            <input type="radio" name="buildLevel" value="iniciante" required>
-                            Iniciante
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="buildLevel" value="intermediario">
-                            Intermediário
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="buildLevel" value="avançado">
-                            Avançado
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="buildLevel" value="expert">
-                            Muito avançado
-                        </label>
-
-                    </div>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>
-                        Como você avalia seu PvP? *
-                    </label>
-
-                    <div class="radio-group">
-
-                        <label class="option">
-                            <input type="radio" name="combatLevel" value="iniciante" required>
-                            Iniciante
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="combatLevel" value="intermediario">
-                            Intermediário
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="combatLevel" value="avançado">
-                            Avançado
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="combatLevel" value="não-interessa">
-                            Não é meu foco
-                        </label>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="differentExperience">
-                    O que você gostaria de fazer neste SMP que nunca conseguiu fazer em outro? *
-                </label>
-
-                <textarea
-                    id="differentExperience"
-                    name="differentExperience"
-                    placeholder="Pode ser uma construção, história, personagem, evento, projeto..."
-                    required></textarea>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================= -->
-        <!-- ETAPA 3 -->
-        <!-- ========================================= -->
-
-        <section class="form-step" data-step="3">
-
-            <div class="step-header">
-
-                <span class="step-icon">🏰</span>
-
-                <div>
-                    <h2>Seu papel no mundo</h2>
-                    <p>Kael'Thera é um mundo vivo. O que você pretende fazer nele?</p>
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    Qual seria seu principal papel no SMP? *
-                </label>
-
-                <div class="radio-group">
-
-                    <label class="option">
-                        <input type="radio" name="smpRole" value="construtor" required>
-                        🏗️ Construtor
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="smpRole" value="explorador">
-                        🧭 Explorador
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="smpRole" value="comerciante">
-                        💰 Comerciante
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="smpRole" value="guerreiro">
-                        ⚔️ Guerreiro
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="smpRole" value="politico">
-                        👑 Líder / Político
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="smpRole" value="lore">
-                        📖 Focado em Lore
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="smpRole" value="outro">
-                        ✦ Outro
-                    </label>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    Você pretende construir uma base própria? *
-                </label>
-
-                <div class="radio-group">
-
-                    <label class="option">
-                        <input type="radio" name="ownBase" value="sim" required>
-                        Sim
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="ownBase" value="talvez">
-                        Talvez
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="ownBase" value="nao">
-                        Não
-                    </label>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="baseDescription">
-                    Que tipo de lugar você gostaria de construir?
-                </label>
-
-                <textarea
-                    id="baseDescription"
-                    name="baseDescription"
-                    placeholder="Cidade, vila, castelo, templo, floresta, laboratório, esconderijo..."></textarea>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="communityProject">
-                    Existe algum grande projeto que gostaria de fazer com outros players?
-                </label>
-
-                <textarea
-                    id="communityProject"
-                    name="communityProject"
-                    placeholder="Ex: construir uma cidade, criar uma guilda, fazer uma estrada entre regiões..."></textarea>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================= -->
-        <!-- ETAPA 4 -->
-        <!-- ========================================= -->
-
-        <section class="form-step" data-step="4">
-
-            <div class="step-header">
-
-                <span class="step-icon">🎭</span>
-
-                <div>
-                    <h2>Seu personagem</h2>
-                    <p>Agora começa a parte de Roleplay.</p>
-                </div>
-
-            </div>
-
-
-            <div class="grid">
-
-                <div class="field">
-
-                    <label for="characterName">
-                        Nome do personagem *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="characterName"
-                        name="characterName"
-                        placeholder="Ex: Kael Tharion"
-                        required>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="characterRace">
-                        Raça / espécie *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="characterRace"
-                        name="characterRace"
-                        placeholder="Humano, elfo, criatura, etc."
-                        required>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="characterAge">
-                        Idade do personagem *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="characterAge"
-                        name="characterAge"
-                        placeholder="Ex: 24 anos"
-                        required>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="profession">
-                        Profissão / ocupação *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="profession"
-                        name="profession"
-                        placeholder="Ferreiro, mago, mercador..."
-                        required>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="personality">
-                    Como é a personalidade do personagem? *
-                </label>
-
-                <textarea
-                    id="personality"
-                    name="personality"
-                    placeholder="Como ele trata outras pessoas? É desconfiado? Extrovertido? Calmo? Ambicioso?"
-                    required></textarea>
-
-            </div>
-
-
-            <div class="grid">
-
-                <div class="field">
-
-                    <label for="characterGoal">
-                        Qual é o principal objetivo dele? *
-                    </label>
-
-                    <textarea
-                        id="characterGoal"
-                        name="characterGoal"
-                        required></textarea>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="characterFear">
-                        Qual é o maior medo dele? *
-                    </label>
-
-                    <textarea
-                        id="characterFear"
-                        name="characterFear"
-                        required></textarea>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="characterConflict">
-                    Existe algum conflito pessoal importante?
-                </label>
-
-                <textarea
-                    id="characterConflict"
-                    name="characterConflict"
-                    placeholder="Uma rivalidade, dívida, trauma, segredo, objetivo impossível..."></textarea>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================= -->
-        <!-- ETAPA 5 -->
-        <!-- ========================================= -->
-
-        <section class="form-step" data-step="5">
-
-            <div class="step-header">
-
-                <span class="step-icon">📜</span>
-
-                <div>
-                    <h2>História</h2>
-                    <p>Conte de onde seu personagem veio.</p>
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="backstory">
-                    História do personagem *
-                </label>
-
-                <textarea
-                    id="backstory"
-                    name="backstory"
-                    class="large-textarea"
-                    placeholder="Conte a história dele: onde nasceu, como cresceu, o que aconteceu antes de chegar a Kael'Thera..."
-                    required></textarea>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="importantEvent">
-                    Qual foi o acontecimento mais importante da vida dele? *
-                </label>
-
-                <textarea
-                    id="importantEvent"
-                    name="importantEvent"
-                    placeholder="Uma guerra, perda, descoberta, encontro, traição..."
-                    required></textarea>
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    Você permite que a administração utilize elementos da sua história em eventos/lore? *
-                </label>
-
-                <div class="radio-group">
-
-                    <label class="option">
-                        <input type="radio" name="lorePermission" value="sim" required>
-                        Sim, podem utilizar livremente
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="lorePermission" value="consultar">
-                        Sim, mas quero ser consultado
-                    </label>
-
-                    <label class="option">
-                        <input type="radio" name="lorePermission" value="nao">
-                        Não
-                    </label>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================= -->
-        <!-- ETAPA 6 -->
-        <!-- ========================================= -->
-
-        <section class="form-step" data-step="6">
-
-            <div class="step-header">
-
-                <span class="step-icon">✨</span>
-
-                <div>
-                    <h2>Poderes e habilidades</h2>
-                    <p>Seu personagem possui algo além das capacidades normais?</p>
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    Seu personagem possui poderes ou habilidades especiais? *
-                </label>
-
-                <div class="radio-group">
-
-                    <label class="option">
-
-                        <input
-                            type="radio"
-                            name="hasPowers"
-                            value="sim"
-                            required>
-
-                        Sim
-
-                    </label>
-
-
-                    <label class="option">
-
-                        <input
-                            type="radio"
-                            name="hasPowers"
-                            value="nao">
-
-                        Não
-
-                    </label>
-
-                </div>
-
-            </div>
-
-
-            <div id="powersFields" class="conditional hidden">
-
-                <div class="field">
-
-                    <label for="powers">
-                        Quais são os poderes? *
-                    </label>
-
-                    <textarea
-                        id="powers"
-                        name="powers"
-                        placeholder="Descreva os poderes do personagem."></textarea>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="powerOrigin">
-                        De onde vêm esses poderes? *
-                    </label>
-
-                    <textarea
-                        id="powerOrigin"
-                        name="powerOrigin"
-                        placeholder="Magia, linhagem, artefato, entidade, treinamento..."></textarea>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="powerLimitations">
-                        Quais são as limitações e fraquezas? *
-                    </label>
-
-                    <textarea
-                        id="powerLimitations"
-                        name="powerLimitations"
-                        placeholder="Todo poder precisa possuir limitações."></textarea>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="balancePermission">
-                    Como você se sente sobre a administração ajustar poderes para manter o equilíbrio?
-                </label>
-
-                <textarea
-                    id="balancePermission"
-                    name="balancePermission"
-                    placeholder="Explique se está aberto a ajustes de balanceamento."></textarea>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================= -->
-        <!-- ETAPA 7 -->
-        <!-- ========================================= -->
-
-        <section class="form-step" data-step="7">
-
-            <div class="step-header">
-
-                <span class="step-icon">🤝</span>
-
-                <div>
-                    <h2>RP e convivência</h2>
-                    <p>Um SMP precisa funcionar como comunidade.</p>
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="loreConflict">
-                    Você estaria disposto a participar de conflitos de lore? *
-                </label>
-
-                <textarea
-                    id="loreConflict"
-                    name="loreConflict"
-                    placeholder="Ex: guerras, rivalidades, traições, disputas políticas..."
-                    required></textarea>
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    Você consegue separar personagem de jogador (IC/OOC)? *
-                </label>
-
-                <div class="radio-group">
-
-                    <label class="option">
-
-                        <input
-                            type="radio"
-                            name="separateConflict"
-                            value="sim"
-                            required>
-
-                        Sim
-
-                    </label>
-
-
-                    <label class="option">
-
-                        <input
-                            type="radio"
-                            name="separateConflict"
-                            value="nao">
-
-                        Tenho dificuldade
-
-                    </label>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="secretObjectives">
-                    Seu personagem possui algum objetivo secreto?
-                </label>
-
-                <textarea
-                    id="secretObjectives"
-                    name="secretObjectives"
-                    placeholder="Pode deixar em branco caso não queira revelar."></textarea>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="rpLimits">
-                    Existe algum tipo de RP que você prefere evitar?
-                </label>
-
-                <textarea
-                    id="rpLimits"
-                    name="rpLimits"
-                    placeholder="Use este espaço para informar limites importantes para sua experiência no servidor."></textarea>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="whyJoin">
-                    Por que você quer entrar no Kael'Thera SMP? *
-                </label>
-
-                <textarea
-                    id="whyJoin"
-                    name="whyJoin"
-                    placeholder="Queremos conhecer sua motivação de verdade."
-                    required></textarea>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="contribution">
-                    O que você acredita que pode acrescentar ao SMP? *
-                </label>
-
-                <textarea
-                    id="contribution"
-                    name="contribution"
-                    placeholder="Construções, histórias, eventos, ideias, comunidade..."
-                    required></textarea>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================= -->
-        <!-- ETAPA 8 -->
-        <!-- ========================================= -->
-
-        <section class="form-step" data-step="8">
-
-            <div class="step-header">
-
-                <span class="step-icon">📋</span>
-
-                <div>
-                    <h2>Revisão</h2>
-                    <p>Confira suas respostas antes de enviar.</p>
-                </div>
-
-            </div>
-
-
-            <div id="reviewContainer" class="review-container">
-
-                <!-- JavaScript preencherá aqui -->
-
-            </div>
-
-
-            <div class="confirmation">
-
-                <label class="confirm-option">
-
-                    <input
-                        type="checkbox"
-                        id="confirmRules"
-                        name="confirmRules"
-                        required>
-
-                    <span>
-                        Confirmo que as informações fornecidas são verdadeiras
-                        e que estou ciente de que minha inscrição será analisada
-                        pela equipe do Kael'Thera SMP.
-                    </span>
-
-                </label>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================= -->
-        <!-- NAVEGAÇÃO -->
-        <!-- ========================================= -->
-
-        <div class="navigation">
-
-            <button
-                type="button"
-                id="prevButton"
-                class="button secondary">
-
-                ← Voltar
-
-            </button>
-
-
-            <button
-                type="button"
-                id="nextButton"
-                class="button primary">
-
-                Próximo →
-
-            </button>
-
-
-            <button
-                type="submit"
-                id="submitButton"
-                class="button submit hidden">
-
-                ✦ Enviar inscrição
-
-            </button>
-
-        </div>
-
-    </form>
-
-
-
-    <!-- ========================================= -->
-    <!-- SUCESSO -->
-    <!-- ========================================= -->
-
-    <section
-        id="successScreen"
-        class="success-screen hidden">
-
-        <div class="success-symbol">
-            ✦
-        </div>
-
-        <h2>Inscrição enviada!</h2>
-
-        <p>
-            Sua inscrição para o Kael'Thera SMP foi registrada.
-            Agora ela será analisada pela equipe.
-        </p>
-
-        <div class="application-id">
-
-            <span>ID da inscrição</span>
-
-            <strong id="applicationId">
-                KT-000000
-            </strong>
-
-        </div>
-
-        <p class="success-small">
-            Guarde este ID para consultar sua inscrição futuramente.
-        </p>
-
+    <section class="portal-feature-strip" aria-label="Recursos do portal">
+        <article>
+            <span>01</span>
+            <div><strong>Rascunho automático</strong><p>Seu progresso fica salvo neste navegador enquanto você escreve.</p></div>
+        </article>
+        <article>
+            <span>02</span>
+            <div><strong>Validação por etapa</strong><p>O formulário só avança quando os campos obrigatórios estão completos.</p></div>
+        </article>
+        <article>
+            <span>03</span>
+            <div><strong>Identidade visual</strong><p>Player, Staff e Sentimentos possuem cores próprias no portal.</p></div>
+        </article>
     </section>
-
 </main>
 
-
 <footer>
-
-    <p>
-        ✦ KAEL'THERA SMP ✦
-    </p>
-
-    <span>
-        Um mundo. Mil histórias. A próxima pode ser a sua.
-    </span>
-
+    <p>✦ KAEL'THERA SMP ✦</p>
+    <span>Um mundo. Mil histórias. A próxima pode ser a sua.</span>
 </footer>
-
-
-<script src="script.js"></script>
-
 </body>
 </html>

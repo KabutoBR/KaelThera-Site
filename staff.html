@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>Kael'Thera SMP — Staff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top" class="theme-staff">
+<div class="background"></div>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Kael'Thera SMP — Início">
+    <span class="brand-mark staff-brand-mark">◆</span>
+    <span class="brand-copy"><strong>KAEL'THERA</strong><small>STAFF</small></span>
+  </a>
+  <nav class="top-nav" aria-label="Navegação principal">
+    <a href="index.html">Início</a><a href="player.html">Player</a>
+    <a class="active staff-link" href="staff.html">Staff</a>
+    <a href="sentimentos.html">Sentimentos</a>
+  </nav>
+  <div class="header-meta"><span class="live-dot"></span>Candidatura de Staff</div>
+</header>
+
+<main class="container">
+  <section class="intro staff-intro">
+    <div class="hero-kicker staff-kicker"><span></span>FORMULÁRIO DE STAFF • KAEL'THERA SMP</div>
+    <div class="symbol staff-symbol">◆</div>
+    <h1>Liderar também é <span>servir à comunidade.</span></h1>
+    <p class="hero-description">Procuramos pessoas responsáveis, equilibradas e capazes de proteger a experiência dos jogadores sem perder o lado humano da comunidade.</p>
+    <div class="hero-badges staff-badges"><span>◆ Responsabilidade</span><span>◆ Comunicação</span><span>◆ Imparcialidade</span><span>◆ Compromisso</span></div>
+    <div class="hero-note staff-note"><div class="hero-note-icon">◎</div><div><strong>Responda como você realmente agiria</strong><p>Os cenários práticos existem para entender seu raciocínio, postura e maturidade.</p></div></div>
+  </section>
+
+  <section class="draft-toolbar staff-draft-toolbar">
+    <div class="draft-status"><span class="draft-status-icon staff-draft-icon">✓</span><div><strong id="draftStatusText">Rascunho automático ativo</strong><small id="draftStatusTime">Seu progresso será salvo neste navegador.</small></div></div>
+    <button type="button" class="draft-clear-button" id="clearDraftButton">Limpar rascunho</button>
+  </section>
+
+  <section class="progress-container staff-progress">
+    <div class="progress-info"><span>Etapa <strong id="stepNumber">1</strong> de 6</span><span id="stepTitle">Identificação</span></div>
+    <div class="progress-bar"><div class="progress-fill staff-progress-fill" id="progressFill"></div></div>
+  </section>
+
+  <div class="form-guidance staff-guidance" id="formGuidance" role="status" aria-live="polite"><span class="guidance-icon">●</span><span>Preencha os campos obrigatórios desta etapa para continuar.</span></div>
+
+  <form id="staffForm">
+    <div class="hidden" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+
+    <section class="form-step active" data-step="1">
+      <div class="step-header"><span class="step-icon">👤</span><div><h2>Identificação</h2><p>Quem está se candidatando e quando costuma estar disponível.</p></div></div>
+      <div class="grid">
+        <div class="field"><label for="nickname">Nickname principal *</label><input type="text" id="nickname" name="nickname" maxlength="80" placeholder="Como você é conhecido?" required></div>
+        <div class="field"><label for="discord">Usuário do Discord *</label><input type="text" id="discord" name="discord" maxlength="100" placeholder="Ex: kaelzin" required></div>
+        <div class="field"><label for="discordUserId">Discord User ID *</label><input type="text" id="discordUserId" name="discordUserId" inputmode="numeric" pattern="[0-9]{17,20}" minlength="17" maxlength="20" placeholder="123456789012345678" required><small>Use o ID numérico da conta.</small></div>
+        <div class="field"><label for="age">Idade *</label><input type="number" id="age" name="age" min="13" max="99" placeholder="Ex: 19" required></div>
+      </div>
+      <div class="field"><label for="timezone">Fuso/horário de referência *</label><input type="text" id="timezone" name="timezone" maxlength="100" placeholder="Ex: Horário de Brasília (BRT)" required></div>
+      <div class="field"><label for="availabilityHours">Em quais períodos você costuma estar disponível? *</label><textarea id="availabilityHours" name="availabilityHours" maxlength="1200" placeholder="Ex: segunda a sexta depois das 19h..." required></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="2">
+      <div class="step-header"><span class="step-icon">🧭</span><div><h2>Experiência</h2><p>Experiência ajuda, mas postura e capacidade de aprender também contam.</p></div></div>
+      <div class="field"><label>Você já fez parte da Staff de algum servidor? *</label><div class="radio-group"><label class="option"><input type="radio" name="priorStaff" value="Sim" required>Sim, já tive experiência em equipe.</label><label class="option"><input type="radio" name="priorStaff" value="Não" required>Não, seria minha primeira experiência.</label></div></div>
+      <div id="priorStaffFields" class="conditional hidden"><div class="field"><label for="priorStaffDetails">Conte sobre sua experiência anterior *</label><textarea id="priorStaffDetails" name="priorStaffDetails" maxlength="2500" placeholder="Servidor, cargo, responsabilidades, tempo na equipe e o que aprendeu."></textarea></div></div>
+      <div class="field"><label>Áreas em que você tem interesse *</label><div class="checkbox-grid"><label class="option"><input type="checkbox" name="staffArea" value="Moderação">Moderação</label><label class="option"><input type="checkbox" name="staffArea" value="Suporte">Suporte</label><label class="option"><input type="checkbox" name="staffArea" value="Lore">Lore</label><label class="option"><input type="checkbox" name="staffArea" value="Construção">Construção</label><label class="option"><input type="checkbox" name="staffArea" value="Eventos">Eventos</label><label class="option"><input type="checkbox" name="staffArea" value="Técnico">Técnico</label></div></div>
+      <div class="field"><label for="minecraftExperience">Experiência com Minecraft, servidores ou comunidades *</label><textarea id="minecraftExperience" name="minecraftExperience" maxlength="2200" required></textarea></div>
+      <div class="field"><label for="toolsExperience">Ferramentas que você sabe usar</label><textarea id="toolsExperience" name="toolsExperience" maxlength="1800" placeholder="Discord, bots, planilhas, tickets, GitHub, plugins, mods..."></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="3">
+      <div class="step-header"><span class="step-icon">🧠</span><div><h2>Perfil</h2><p>Como você trabalha, aprende e reage sob pressão.</p></div></div>
+      <div class="field"><label for="strengths">Principais pontos fortes *</label><textarea id="strengths" name="strengths" maxlength="1800" required></textarea></div>
+      <div class="field"><label for="weaknesses">Pontos que ainda precisa melhorar *</label><textarea id="weaknesses" name="weaknesses" maxlength="1800" required></textarea></div>
+      <div class="field"><label for="pressureResponse">Como reage quando várias pessoas exigem solução ao mesmo tempo? *</label><textarea id="pressureResponse" name="pressureResponse" maxlength="2200" required></textarea></div>
+      <div class="field"><label for="feedbackResponse">Como reage ao receber uma crítica ou correção de outro Staff? *</label><textarea id="feedbackResponse" name="feedbackResponse" maxlength="1800" required></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="4">
+      <div class="step-header"><span class="step-icon">⚖️</span><div><h2>Situações práticas</h2><p>Responda como você agiria e justifique suas decisões.</p></div></div>
+      <div class="scenario-card"><span class="scenario-number">01</span><div class="field"><label for="scenarioFriend">Um amigo próximo quebra uma regra importante. O que você faz? *</label><textarea id="scenarioFriend" name="scenarioFriend" maxlength="2600" required></textarea></div></div>
+      <div class="scenario-card"><span class="scenario-number">02</span><div class="field"><label for="scenarioConflict">Dois jogadores discutem e ambos dizem que o outro começou. Como conduz a situação? *</label><textarea id="scenarioConflict" name="scenarioConflict" maxlength="2600" required></textarea></div></div>
+      <div class="scenario-card"><span class="scenario-number">03</span><div class="field"><label for="scenarioStaff">Você discorda de uma decisão tomada por outro Staff. O que faz? *</label><textarea id="scenarioStaff" name="scenarioStaff" maxlength="2600" required></textarea></div></div>
+      <div class="scenario-card"><span class="scenario-number">04</span><div class="field"><label for="scenarioAbuse">Um jogador acusa um Staff de abuso, mas ainda não existem provas claras. Como procede? *</label><textarea id="scenarioAbuse" name="scenarioAbuse" maxlength="2600" required></textarea></div></div>
+      <div class="field"><label for="confidentiality">Como lidaria com informações internas que não podem ser divulgadas? *</label><textarea id="confidentiality" name="confidentiality" maxlength="2000" required></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="5">
+      <div class="step-header"><span class="step-icon">✦</span><div><h2>Kael'Thera</h2><p>Por que você quer fazer parte da equipe.</p></div></div>
+      <div class="field"><label for="whyStaff">Por que quer entrar para a Staff do Kael'Thera? *</label><textarea id="whyStaff" name="whyStaff" maxlength="2600" required></textarea></div>
+      <div class="field"><label for="projectView">O que você entende sobre a proposta do Kael'Thera? *</label><textarea id="projectView" name="projectView" maxlength="2600" required></textarea></div>
+      <div class="field"><label for="contribution">O que pode acrescentar à equipe? *</label><textarea id="contribution" name="contribution" maxlength="2200" required></textarea></div>
+      <div class="field"><label for="weeklyAvailability">Quanto tempo por semana consegue dedicar? *</label><input type="text" id="weeklyAvailability" name="weeklyAvailability" maxlength="160" placeholder="Ex: cerca de 10 horas por semana" required></div>
+      <div class="field"><label for="additionalNotes">Algo importante que não perguntamos?</label><textarea id="additionalNotes" name="additionalNotes" maxlength="2200" placeholder="Opcional."></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="6">
+      <div class="step-header"><span class="step-icon">📋</span><div><h2>Revisão</h2><p>Confira tudo antes de enviar sua candidatura.</p></div></div>
+      <div class="local-test-banner"><span>◆</span><div><strong>Envio oficial</strong><p>Ao concluir, sua candidatura será registrada para análise da administração do Kael'Thera. Confira todas as respostas antes de enviar.</p></div></div>
+      <div id="reviewContainer" class="review-container"></div>
+      <div class="confirmation"><label class="confirm-option"><input type="checkbox" id="confirmRules" name="confirmRules" required><span>Confirmo que revisei minhas respostas e autorizo o envio desta candidatura para análise da administração do Kael'Thera.</span></label></div>
+    </section>
+
+    <div class="navigation">
+      <button type="button" id="prevButton" class="button secondary">← Voltar</button>
+      <button type="button" id="nextButton" class="button primary staff-primary">Próximo →</button>
+      <button type="submit" id="submitButton" class="button submit staff-submit hidden">◆ Enviar candidatura</button>
+    </div>
+  </form>
+
+  <section id="successScreen" class="success-screen staff-success hidden">
+    <div class="success-symbol staff-success-symbol">◆</div><span class="eyebrow staff-eyebrow">CANDIDATURA ENVIADA</span>
+    <h2>Sua candidatura foi registrada!</h2><p>Guarde o ID abaixo. Ele identifica sua candidatura de Staff dentro do sistema do Kael'Thera.</p>
+    <div class="success-id">ID da candidatura: <strong id="staffApplicationId">ST-000000</strong></div>
+    <a class="button secondary back-home-button" href="index.html">← Voltar ao portal</a>
+  </section>
+</main>
+
+<div class="portal-modal hidden" id="draftModal" role="dialog" aria-modal="true">
+  <div class="portal-modal-backdrop"></div><div class="portal-modal-card staff-modal-card"><div class="portal-modal-symbol staff-modal-symbol">◆</div><span class="eyebrow staff-eyebrow">RASCUNHO ENCONTRADO</span><h2>Continuar sua candidatura?</h2><p>Encontramos uma candidatura de Staff ainda não concluída neste navegador.</p><div class="draft-found-meta"><span>Último salvamento</span><strong id="draftFoundTime">Agora</strong></div><div class="portal-modal-actions"><button type="button" class="button secondary" id="startFreshButton">Começar novamente</button><button type="button" class="button primary staff-primary" id="restoreDraftButton">Continuar rascunho →</button></div></div>
+</div>
+<div class="portal-modal hidden" id="clearDraftModal" role="dialog" aria-modal="true">
+  <div class="portal-modal-backdrop"></div><div class="portal-modal-card compact"><div class="portal-modal-symbol danger">×</div><span class="eyebrow danger-text">LIMPAR RASCUNHO</span><h2>Apagar a candidatura salva?</h2><p>Esta ação apaga apenas o rascunho local deste navegador.</p><div class="portal-modal-actions"><button type="button" class="button secondary" id="cancelClearDraftButton">Cancelar</button><button type="button" class="button danger-button" id="confirmClearDraftButton">Apagar rascunho</button></div></div>
+</div>
+<footer><p>◆ KAEL'THERA STAFF ◆</p><span>Responsabilidade antes de autoridade.</span></footer>
+<script src="staff.js"></script>
+</body>
+</html>

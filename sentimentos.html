@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>Kael'Thera SMP — Sentimentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top" class="theme-feeling">
+<div class="background"></div>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Kael'Thera SMP — Início">
+    <span class="brand-mark feeling-brand-mark">✦</span>
+    <span class="brand-copy"><strong>KAEL'THERA</strong><small>SENTIMENTOS</small></span>
+  </a>
+  <nav class="top-nav" aria-label="Navegação principal">
+    <a href="index.html">Início</a><a href="player.html">Player</a><a href="staff.html">Staff</a><a class="active feeling-link" href="sentimentos.html">Sentimentos</a>
+  </nav>
+  <div class="header-meta feeling-meta"><span class="live-dot"></span>Avaliação de Sentimento</div>
+</header>
+
+<main class="container">
+  <section class="intro feeling-intro">
+    <div class="hero-kicker feeling-kicker"><span></span>AVALIAÇÃO DE SENTIMENTO • KAEL'THERA SMP</div>
+    <div class="symbol feeling-symbol" aria-hidden="true">✦</div>
+    <h1>O sentimento que você deseja <span>e o que existe em você.</span></h1>
+    <p class="hero-description">Você pode escolher o Sentimento com o qual mais deseja se conectar, ou deixar essa decisão para a equipe. Independentemente da escolha, suas respostas serão analisadas para entender qual dos doze Sentimentos mais combina com seu perfil dentro de Kael'Thera.</p>
+    <div class="hero-badges feeling-badges"><span>✦ Escolha opcional</span><span>✦ Análise individual</span><span>✦ Entrevista</span><span>✦ Possibilidade de alteração</span></div>
+    <div class="hero-note feeling-note"><div class="hero-note-icon">◎</div><div><strong>Sua escolha não precisa ser “a resposta certa”</strong><p>Se você selecionar um Sentimento, ele será considerado como sua preferência. A Staff poderá confirmar, sugerir outro ou pedir alterações durante a análise e a entrevista.</p></div></div>
+  </section>
+
+  <section class="feelings-catalog" aria-label="Os 12 Sentimentos de Kael'Thera">
+    <div class="feelings-catalog-header"><div><span class="eyebrow feeling-eyebrow">OS 12 SENTIMENTOS</span><h2>Kael'Thera</h2></div><p>Use a lista como referência. Você não é obrigado a escolher um agora.</p></div>
+    <div class="feelings-mini-grid">
+      <span><b>01</b> Ignis <small>Alegria</small></span><span><b>02</b> Aqualis <small>Tristeza</small></span><span><b>03</b> Atramentum <small>Frustração</small></span>
+      <span><b>04</b> Spina <small>Raiva</small></span><span><b>05</b> Umbra <small>Medo</small></span><span><b>06</b> Vinculum <small>Apego</small></span>
+      <span><b>07</b> Faisca <small>Ansiedade</small></span><span><b>08</b> Lux <small>Esperança</small></span><span><b>09</b> Gravitas <small>Culpa</small></span>
+      <span><b>10</b> Glacies <small>Solidão</small></span><span><b>11</b> Speculum <small>Inveja</small></span><span><b>12</b> Aura <small>Nostalgia</small></span>
+    </div>
+  </section>
+
+  <section class="draft-toolbar feeling-draft-toolbar" aria-label="Status do rascunho">
+    <div class="draft-status"><span class="draft-status-icon feeling-draft-icon">✓</span><div><strong id="draftStatusText">Rascunho automático ativo</strong><small id="draftStatusTime">Seu progresso será salvo neste navegador.</small></div></div>
+    <button type="button" class="draft-clear-button" id="clearDraftButton">Limpar rascunho</button>
+  </section>
+
+  <section class="progress-container feeling-progress"><div class="progress-info"><span>Etapa <strong id="stepNumber">1</strong> de 8</span><span id="stepTitle">Identificação & escolha</span></div><div class="progress-bar"><div class="progress-fill feeling-progress-fill" id="progressFill"></div></div></section>
+  <div class="form-guidance feeling-guidance" id="formGuidance" role="status" aria-live="polite"><span class="guidance-icon">●</span><span>Preencha os campos obrigatórios desta etapa para continuar.</span></div>
+
+  <form id="feelingForm">
+    <div class="hidden" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+
+    <section class="form-step active" data-step="1">
+      <div class="step-header"><span class="step-icon">👤</span><div><h2>Identificação & escolha</h2><p>Primeiro, quem é você e como deseja lidar com a escolha do Sentimento?</p></div></div>
+      <div class="grid">
+        <div class="field"><label for="nickname">Nickname principal *</label><input type="text" id="nickname" name="nickname" maxlength="80" placeholder="Como você é conhecido?" required></div>
+        <div class="field"><label for="discord">Usuário do Discord *</label><input type="text" id="discord" name="discord" maxlength="100" placeholder="Ex: kaelzin" required></div>
+        <div class="field"><label for="discordUserId">Discord User ID *</label><input type="text" id="discordUserId" name="discordUserId" inputmode="numeric" pattern="[0-9]{17,20}" minlength="17" maxlength="20" placeholder="123456789012345678" required><small>Use o ID numérico do seu usuário.</small></div>
+        <div class="field"><label for="age">Idade *</label><input type="number" id="age" name="age" min="13" max="99" placeholder="Ex: 19" required></div>
+      </div>
+      <div class="field"><label>Como você quer lidar com a escolha do Sentimento? *</label><div class="radio-group">
+        <label class="option"><input type="radio" name="choiceMode" value="quero_escolher" required>Quero indicar o Sentimento que mais desejo.</label>
+        <label class="option"><input type="radio" name="choiceMode" value="staff_decide" required>Prefiro responder e deixar a Staff avaliar.</label>
+      </div></div>
+      <div id="desiredFeelingFields" class="conditional hidden">
+        <div class="field"><label for="desiredFeeling">Qual Sentimento você deseja? *</label><select id="desiredFeeling" name="desiredFeeling"><option value="">Selecione...</option><option>Ignis — Alegria</option><option>Aqualis — Tristeza</option><option>Atramentum — Frustração</option><option>Spina — Raiva</option><option>Umbra — Medo</option><option>Vinculum — Apego</option><option>Faisca — Ansiedade</option><option>Lux — Esperança</option><option>Gravitas — Culpa</option><option>Glacies — Solidão</option><option>Speculum — Inveja</option><option>Aura — Nostalgia</option></select></div>
+        <div class="field"><label for="desiredFeelingReason">Por que esse Sentimento chamou sua atenção? *</label><textarea id="desiredFeelingReason" name="desiredFeelingReason" maxlength="2400" placeholder="Pode ser pela ideia, estética, significado, identificação pessoal ou qualquer outro motivo."></textarea></div>
+      </div>
+    </section>
+
+    <section class="form-step" data-step="2">
+      <div class="step-header"><span class="step-icon">🫀</span><div><h2>Como você sente</h2><p>Queremos entender quais emoções costumam aparecer primeiro em você.</p></div></div>
+      <div class="field"><label for="strongEmotion">Quando algo importante acontece, qual emoção costuma tomar conta de você primeiro? *</label><textarea id="strongEmotion" name="strongEmotion" maxlength="2200" placeholder="Explique a emoção e como ela aparece no seu comportamento." required></textarea></div>
+      <div class="field"><label for="goodMomentReaction">Quando algo muito bom acontece, como você costuma reagir? *</label><textarea id="goodMomentReaction" name="goodMomentReaction" maxlength="2200" required></textarea></div>
+      <div class="field"><label for="badMomentReaction">E quando algo dá muito errado? *</label><textarea id="badMomentReaction" name="badMomentReaction" maxlength="2200" required></textarea></div>
+      <div class="field"><label for="emotionControl">Você costuma demonstrar o que sente ou esconder? Por quê? *</label><textarea id="emotionControl" name="emotionControl" maxlength="2200" required></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="3">
+      <div class="step-header"><span class="step-icon">⚡</span><div><h2>Perda, falha & controle</h2><p>Alguns sentimentos aparecem com mais força quando as coisas saem do nosso controle.</p></div></div>
+      <div class="field"><label for="lossReaction">Como você reage quando perde algo ou alguém importante? *</label><textarea id="lossReaction" name="lossReaction" maxlength="2600" required></textarea></div>
+      <div class="field"><label for="failureReaction">Quando você se esforça muito e falha, o que acontece dentro de você? *</label><textarea id="failureReaction" name="failureReaction" maxlength="2600" required></textarea></div>
+      <div class="field"><label for="lackOfControl">Como você reage quando percebe que não tem controle sobre uma situação? *</label><textarea id="lackOfControl" name="lackOfControl" maxlength="2600" required></textarea></div>
+      <div class="field"><label for="waitingReaction">Quando precisa esperar por algo importante sem saber o resultado, como você fica? *</label><textarea id="waitingReaction" name="waitingReaction" maxlength="2200" required></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="4">
+      <div class="step-header"><span class="step-icon">🔗</span><div><h2>Vínculos & distância</h2><p>Como você se conecta com pessoas e como reage quando esses vínculos mudam?</p></div></div>
+      <div class="field"><label for="attachmentStyle">Quando você cria um vínculo forte com alguém, como costuma agir? *</label><textarea id="attachmentStyle" name="attachmentStyle" maxlength="2600" required></textarea></div>
+      <div class="field"><label for="lettingGo">O que é mais difícil para você: criar vínculos ou deixar alguém partir? Explique. *</label><textarea id="lettingGo" name="lettingGo" maxlength="2600" required></textarea></div>
+      <div class="field"><label for="loneliness">Como você lida com períodos em que está sozinho? *</label><textarea id="loneliness" name="loneliness" maxlength="2600" required></textarea></div>
+      <div class="field"><label for="memoryAttachment">Você costuma voltar mentalmente a pessoas, lugares ou momentos do passado? Como isso te afeta? *</label><textarea id="memoryAttachment" name="memoryAttachment" maxlength="2600" required></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="5">
+      <div class="step-header"><span class="step-icon">⚖️</span><div><h2>Conflitos & decisões</h2><p>Não existe resposta perfeita. Queremos entender o seu raciocínio.</p></div></div>
+      <div class="scenario-card feeling-scenario"><span class="scenario-number">01</span><div class="field"><label for="scenarioLovedOne">Você pode proteger alguém muito importante para você, mas isso prejudicará várias pessoas que não conhece. O que faria e por quê? *</label><textarea id="scenarioLovedOne" name="scenarioLovedOne" maxlength="3000" required></textarea></div></div>
+      <div class="scenario-card feeling-scenario"><span class="scenario-number">02</span><div class="field"><label for="scenarioRecognition">Você trabalhou durante muito tempo por algo, mas outra pessoa recebeu o reconhecimento. Como você reagiria? *</label><textarea id="scenarioRecognition" name="scenarioRecognition" maxlength="3000" required></textarea></div></div>
+      <div class="scenario-card feeling-scenario"><span class="scenario-number">03</span><div class="field"><label for="scenarioMistake">Uma decisão sua causou um problema sério para outra pessoa, mesmo sem intenção. O que você faria depois? *</label><textarea id="scenarioMistake" name="scenarioMistake" maxlength="3000" required></textarea></div></div>
+      <div class="scenario-card feeling-scenario"><span class="scenario-number">04</span><div class="field"><label for="scenarioFuture">Tudo ao seu redor está dando errado, mas ainda existe uma pequena possibilidade de melhorar. O que te faria continuar ou desistir? *</label><textarea id="scenarioFuture" name="scenarioFuture" maxlength="3000" required></textarea></div></div>
+    </section>
+
+    <section class="form-step" data-step="6">
+      <div class="step-header"><span class="step-icon">🪞</span><div><h2>Você consigo mesmo</h2><p>Agora queremos entender como você se enxerga quando ninguém está observando.</p></div></div>
+      <div class="field"><label for="bestTrait">Qual característica sua você mais valoriza? *</label><textarea id="bestTrait" name="bestTrait" maxlength="2200" required></textarea></div>
+      <div class="field"><label for="hardTrait">Qual característica sua mais te incomoda ou atrapalha? *</label><textarea id="hardTrait" name="hardTrait" maxlength="2200" required></textarea></div>
+      <div class="field"><label for="comparison">Quando alguém consegue algo que você queria muito, o que você sente? *</label><textarea id="comparison" name="comparison" maxlength="2400" required></textarea></div>
+      <div class="field"><label for="guilt">Existe algo que você costuma carregar por muito tempo depois de errar? Como lida com isso? *</label><textarea id="guilt" name="guilt" maxlength="2400" required></textarea></div>
+      <div class="field"><label for="fear">Quando sente medo, você tende a enfrentar, evitar, esconder, travar ou fazer outra coisa? Explique. *</label><textarea id="fear" name="fear" maxlength="2400" required></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="7">
+      <div class="step-header"><span class="step-icon">📖</span><div><h2>História emocional</h2><p>Use esta etapa para dar contexto às respostas anteriores.</p></div></div>
+      <div class="field"><label for="emotionalStory">Conte uma experiência real ou fictícia que represente bem como você lida com emoções fortes. *</label><textarea id="emotionalStory" name="emotionalStory" maxlength="8000" class="large-textarea" required></textarea></div>
+      <div class="field"><label for="hardToLeave">Existe algo que você tem dificuldade de deixar para trás? *</label><textarea id="hardToLeave" name="hardToLeave" maxlength="5000" required></textarea></div>
+      <div class="field"><label for="motivation">O que normalmente te faz continuar quando tudo parece estar dando errado? *</label><textarea id="motivation" name="motivation" maxlength="5000" required></textarea></div>
+      <div class="field"><label for="anythingElse">Existe alguma coisa sobre sua forma de sentir que as perguntas não conseguiram mostrar?</label><textarea id="anythingElse" name="anythingElse" maxlength="5000" placeholder="Opcional."></textarea></div>
+    </section>
+
+    <section class="form-step" data-step="8">
+      <div class="step-header"><span class="step-icon">📋</span><div><h2>Revisão</h2><p>Confira tudo antes de concluir o teste local.</p></div></div>
+
+            <div id="reviewContainer" class="review-container"></div>
+      <div class="confirmation"><label class="confirm-option"><input type="checkbox" id="confirmRules" name="confirmRules" required><span>Confirmo que revisei minhas respostas e entendo que minha preferência de Sentimento poderá ser confirmada, alterada ou discutida com a Staff durante a análise e entrevista.</span></label></div>
+    </section>
+
+    <div class="navigation"><button type="button" id="prevButton" class="button secondary">← Voltar</button><button type="button" id="nextButton" class="button primary feeling-primary">Próximo →</button><button type="submit" id="submitButton" class="button submit feeling-submit hidden">✦ Enviar avaliação</button></div>
+  </form>
+
+  <section id="successScreen" class="success-screen feeling-success hidden">
+    <div class="success-symbol feeling-success-symbol">✦</div><span class="eyebrow feeling-eyebrow">AVALIAÇÃO ENVIADA</span><h2>Avaliação enviada com sucesso!</h2><p>As oito etapas, a escolha opcional, a revisão e o rascunho local estão funcionando. Nenhuma avaliação foi enviada para o servidor ainda.</p><div class="success-id">Próximo passo: <strong>conectar Sentimentos ao Google Sheets e ao bot.</strong></div><a class="button secondary back-home-button" href="index.html">← Voltar ao portal</a>
+  </section>
+</main>
+
+<div class="portal-modal hidden" id="draftModal" role="dialog" aria-modal="true" aria-labelledby="draftModalTitle"><div class="portal-modal-backdrop"></div><div class="portal-modal-card feeling-modal-card"><div class="portal-modal-symbol feeling-modal-symbol">✦</div><span class="eyebrow feeling-eyebrow">RASCUNHO ENCONTRADO</span><h2 id="draftModalTitle">Continuar sua avaliação?</h2><p>Encontramos uma avaliação de Sentimento ainda não concluída neste navegador. Você pode restaurar as respostas e continuar da etapa anterior.</p><div class="draft-found-meta"><span>Último salvamento</span><strong id="draftFoundTime">Agora</strong></div><div class="portal-modal-actions"><button type="button" class="button secondary" id="startFreshButton">Começar novamente</button><button type="button" class="button primary feeling-primary" id="restoreDraftButton">Continuar rascunho →</button></div></div></div>
+<div class="portal-modal hidden" id="clearDraftModal" role="dialog" aria-modal="true" aria-labelledby="clearDraftTitle"><div class="portal-modal-backdrop"></div><div class="portal-modal-card compact"><div class="portal-modal-symbol danger">×</div><span class="eyebrow danger-text">LIMPAR RASCUNHO</span><h2 id="clearDraftTitle">Apagar a avaliação salva?</h2><p>Esta ação apaga somente o rascunho local deste navegador.</p><div class="portal-modal-actions"><button type="button" class="button secondary" id="cancelClearDraftButton">Cancelar</button><button type="button" class="button danger-button" id="confirmClearDraftButton">Apagar rascunho</button></div></div></div>
+<footer><p>✦ KAEL'THERA — SENTIMENTOS ✦</p><span>Doze formas de sentir. Uma escolha que também precisa fazer sentido.</span></footer>
+<script src="sentimentos.js"></script>
+</body>
+</html>
