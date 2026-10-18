@@ -6,7 +6,6 @@
   <meta name="theme-color" content="#0b0b0d">
   <title>Livro de Kael'Thera</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
   <style>
 /* KAEL'THERA — LIVRO CSS EMBUTIDO */
 :root {
@@ -364,6 +363,7 @@ body.book-page::before {
   }
 }
 
+  \n/* =========================================================\n   MODO LEITURA + PLAYER DISCRETO\n   ========================================================= */\n.book-text[hidden] {\n  display: none !important;\n}\n\n.book-player {\n  transition:\n    opacity .28s ease,\n    transform .28s ease,\n    box-shadow .28s ease,\n    background .28s ease,\n    border-color .28s ease;\n  transform-origin: top center;\n}\n\nbody.book-follow-enabled.is-playing.book-player-idle .book-player {\n  opacity: .075;\n  transform: translateY(-8px) scale(.985);\n  box-shadow: none;\n  pointer-events: none;\n}\n\nbody.book-follow-enabled.is-playing.book-player-idle .book-control-play {\n  opacity: .55;\n}\n\n.book-segment {\n  scroll-margin-top: 270px;\n}\n\n.book-text[hidden] + .book-bottom-nav {\n  margin-top: 34px;\n}\n\n@media (max-width: 700px) {\n  body.book-follow-enabled.is-playing.book-player-idle .book-player {\n    opacity: .055;\n    transform: translateY(-6px) scale(.98);\n  }\n\n  .book-segment {\n    scroll-margin-top: 235px;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .book-player { transition: none; }\n}\n
   </style>
 </head>
 <body class="book-page">
@@ -424,8 +424,8 @@ body.book-page::before {
             </label>
 
             <label class="book-follow">
-              <input id="autoFollow" type="checkbox" checked>
-              <span>Acompanhar texto</span>
+              <input id="autoFollow" type="checkbox" checked aria-controls="bookText" aria-expanded="true">
+              <span>Acompanhar leitura</span>
             </label>
           </div>
         </section>
