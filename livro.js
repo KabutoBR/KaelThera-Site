@@ -17,6 +17,188 @@
   const STORAGE_KEY = 'kaelthera:livro:progresso';
 
   const $ = (s) => document.querySelector(s);
+
+  // Garante que o botão "Guardar player" e o player compacto existam
+  // mesmo se o livro.html publicado ainda for uma versão antiga.
+  function ensurePlayerDockUI() {
+    const player = document.querySelector('.book-player');
+    const options = document.querySelector('.book-player-options');
+
+    if (!player || !options) return;
+
+    let follow = options.querySelector('.book-follow');
+    let actions = options.querySelector('.book-player-actions');
+
+    if (!actions) {
+      actions = document.createElement('div');
+      actions.className = 'book-player-actions';
+
+      if (follow) {
+        follow.parentNode.insertBefore(actions, follow);
+        actions.appendChild(follow);
+      } else {
+        options.appendChild(actions);
+      }
+    }
+
+    if (!document.getElementById('collapsePlayer')) {
+      const button = document.createElement('button');
+      button.id = 'collapsePlayer';
+      button.className = 'book-player-store';
+      button.type = 'button';
+      button.setAttribute('aria-controls', 'playerDock');
+      button.textContent = 'Guardar player ↓';
+      actions.appendChild(button);
+    }
+
+    if (!document.getElementById('playerDock')) {
+      const dock = document.createElement('aside');
+      dock.id = 'playerDock';
+      dock.className = 'book-player-dock';
+      dock.setAttribute('aria-label', 'Player compacto');
+      dock.setAttribute('aria-hidden', 'true');
+      dock.hidden = true;
+      dock.innerHTML = `
+        <button id="dockPlayPause" class="book-player-dock-play" type="button" aria-label="Reproduzir áudio">▶</button>
+        <div class="book-player-dock-info">
+          <strong>🎧 Audiolivro</strong>
+          <div class="book-player-dock-meta">
+            <span id="dockAct">Ato I</span>
+            <span>•</span>
+            <span id="dockTime">00:00 / 00:00</span>
+          </div>
+        </div>
+        <button id="dockOpen" class="book-player-dock-open" type="button">Abrir player ↑</button>
+      `;
+      player.insertAdjacentElement('afterend', dock);
+    }
+
+    if (!document.getElementById('kt-player-dock-style')) {
+      const style = document.createElement('style');
+      style.id = 'kt-player-dock-style';
+      style.textContent = `
+        .book-player-actions {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+
+        .book-player-store,
+        .book-player-dock-open,
+        .book-player-dock-play {
+          appearance: none;
+          border: 1px solid rgba(217,180,93,.28);
+          color: #e8ddc2;
+          background: rgba(217,180,93,.07);
+          cursor: pointer;
+          transition: .2s ease;
+        }
+
+        .book-player-store {
+          padding: 8px 12px;
+          border-radius: 10px;
+          font: inherit;
+          font-size: .76rem;
+        }
+
+        .book-player-store:hover,
+        .book-player-dock-open:hover,
+        .book-player-dock-play:hover {
+          color: #efcb72;
+          border-color: rgba(239,203,114,.55);
+          background: rgba(217,180,93,.12);
+        }
+
+        .book-player-dock {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          z-index: 80;
+          min-width: min(370px, calc(100vw - 32px));
+          display: grid;
+          grid-template-columns: 46px minmax(0,1fr) auto;
+          align-items: center;
+          gap: 12px;
+          padding: 12px 14px;
+          border: 1px solid rgba(217,180,93,.28);
+          border-radius: 16px;
+          background: rgba(13,14,17,.96);
+          box-shadow: 0 18px 55px rgba(0,0,0,.45);
+          backdrop-filter: blur(18px);
+          color: #ece8de;
+        }
+
+        .book-player-dock[hidden] {
+          display: none !important;
+        }
+
+        .book-player-dock-play {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          color: #efcb72;
+          font-size: 1rem;
+        }
+
+        .book-player-dock-info {
+          min-width: 0;
+          display: grid;
+          gap: 4px;
+        }
+
+        .book-player-dock-info strong {
+          font-size: .82rem;
+          font-weight: 650;
+        }
+
+        .book-player-dock-meta {
+          display: flex;
+          gap: 6px;
+          color: #9c978d;
+          font-size: .7rem;
+          white-space: nowrap;
+        }
+
+        .book-player-dock-open {
+          padding: 8px 10px;
+          border-radius: 9px;
+          font: inherit;
+          font-size: .7rem;
+          white-space: nowrap;
+        }
+
+        body.book-player-collapsed .book-player {
+          display: none !important;
+        }
+
+        @media (max-width: 620px) {
+          .book-player-actions {
+            width: 100%;
+            justify-content: space-between;
+          }
+
+          .book-player-dock {
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            min-width: 0;
+            grid-template-columns: 42px minmax(0,1fr);
+          }
+
+          .book-player-dock-open {
+            grid-column: 1 / -1;
+            width: 100%;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+
+  ensurePlayerDockUI();
+
   const el = {
     audio: $('#bookAudio'), actList: $('#actList'), actNumber: $('#actNumber'),
     actTitle: $('#actTitle'), chapterNow: $('#chapterNow'), bookText: $('#bookText'),
