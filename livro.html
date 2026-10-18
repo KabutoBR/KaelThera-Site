@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0d">
+  <title>Livro de Kael'Thera</title>
+  <link rel="stylesheet" href="livro.css">
+</head>
+<body class="book-page">
+  <div class="book-shell">
+    <header class="book-topbar">
+      <a class="book-back" href="index.html" aria-label="Voltar ao portal">← Portal</a>
+
+      <div class="book-brand">
+        <span class="book-kicker">KAEL'THERA</span>
+        <h1>O Livro</h1>
+      </div>
+
+      <button id="toggleSidebar" class="book-icon-btn" type="button" aria-label="Abrir lista de atos">☰</button>
+    </header>
+
+    <div class="book-layout">
+      <aside id="bookSidebar" class="book-sidebar" aria-label="Lista de atos">
+        <div class="book-sidebar-head">
+          <span>ATOS</span>
+          <button id="closeSidebar" class="book-icon-btn book-close" type="button" aria-label="Fechar lista">×</button>
+        </div>
+
+        <nav id="actList" class="book-act-list"></nav>
+      </aside>
+
+      <main class="book-main">
+        <section class="book-hero">
+          <p id="actNumber" class="book-eyebrow">ATO I</p>
+          <h2 id="actTitle">Ato I</h2>
+          <p id="chapterNow" class="book-current-chapter">Preparando leitura...</p>
+        </section>
+
+        <section class="book-player" aria-label="Player de áudio">
+          <audio id="bookAudio" preload="metadata"></audio>
+
+          <div class="book-player-main">
+            <button id="prevAct" class="book-control book-control-small" type="button" aria-label="Ato anterior">⏮</button>
+            <button id="playPause" class="book-control book-control-play" type="button" aria-label="Reproduzir">▶</button>
+            <button id="nextAct" class="book-control book-control-small" type="button" aria-label="Próximo ato">⏭</button>
+          </div>
+
+          <div class="book-progress-wrap">
+            <span id="currentTime">00:00</span>
+            <input id="progress" class="book-progress" type="range" min="0" max="1000" value="0" step="1" aria-label="Progresso do áudio">
+            <span id="duration">00:00</span>
+          </div>
+
+          <div class="book-player-options">
+            <label class="book-speed-label" for="speed">
+              Velocidade
+              <select id="speed" class="book-speed">
+                <option value="0.75">0.75×</option>
+                <option value="1" selected>1×</option>
+                <option value="1.25">1.25×</option>
+                <option value="1.5">1.5×</option>
+                <option value="2">2×</option>
+              </select>
+            </label>
+
+            <label class="book-follow">
+              <input id="autoFollow" type="checkbox" checked>
+              <span>Acompanhar texto</span>
+            </label>
+          </div>
+        </section>
+
+        <section id="bookText" class="book-text" aria-live="polite">
+          <div class="book-loading">
+            <span class="book-spinner"></span>
+            Carregando ato...
+          </div>
+        </section>
+
+        <section class="book-bottom-nav" aria-label="Navegação entre atos">
+          <button id="prevActBottom" class="book-nav-btn" type="button">← Ato anterior</button>
+          <button id="nextActBottom" class="book-nav-btn" type="button">Próximo ato →</button>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="sidebarBackdrop" class="book-backdrop" hidden></div>
+  <script src="livro.js"></script>
+</body>
+</html>
