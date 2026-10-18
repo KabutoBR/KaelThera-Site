@@ -363,7 +363,148 @@ body.book-page::before {
   }
 }
 
-  \n/* =========================================================\n   MODO LEITURA + PLAYER DISCRETO\n   ========================================================= */\n.book-text[hidden] {\n  display: none !important;\n}\n\n.book-player {\n  transition:\n    opacity .28s ease,\n    transform .28s ease,\n    box-shadow .28s ease,\n    background .28s ease,\n    border-color .28s ease;\n  transform-origin: top center;\n}\n\nbody.book-follow-enabled.is-playing.book-player-idle .book-player {\n  opacity: .075;\n  transform: translateY(-8px) scale(.985);\n  box-shadow: none;\n  pointer-events: none;\n}\n\nbody.book-follow-enabled.is-playing.book-player-idle .book-control-play {\n  opacity: .55;\n}\n\n.book-segment {\n  scroll-margin-top: 270px;\n}\n\n.book-text[hidden] + .book-bottom-nav {\n  margin-top: 34px;\n}\n\n@media (max-width: 700px) {\n  body.book-follow-enabled.is-playing.book-player-idle .book-player {\n    opacity: .055;\n    transform: translateY(-6px) scale(.98);\n  }\n\n  .book-segment {\n    scroll-margin-top: 235px;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .book-player { transition: none; }\n}\n
+
+
+/* =========================================================
+   MODO LEITURA + CAIXA DO PLAYER
+   ========================================================= */
+
+.book-text[hidden],
+.book-player[hidden],
+.book-player-dock[hidden] {
+  display: none !important;
+}
+
+.book-player {
+  position: sticky;
+}
+
+.book-player-options {
+  flex-wrap: wrap;
+}
+
+.book-player-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.book-player-store {
+  appearance: none;
+  border: 1px solid rgba(239,203,114,.24);
+  border-radius: 9px;
+  padding: 7px 10px;
+  color: var(--book-muted);
+  background: rgba(217,180,93,.045);
+  font: inherit;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.book-player-store:hover {
+  color: var(--book-gold-strong);
+  border-color: rgba(239,203,114,.48);
+  background: rgba(217,180,93,.09);
+}
+
+/* Caixa compacta que guarda o player sem interromper o áudio. */
+.book-player-dock {
+  position: fixed;
+  z-index: 60;
+  right: 22px;
+  bottom: 22px;
+  width: min(310px, calc(100vw - 30px));
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr) auto;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 11px;
+  border: 1px solid rgba(239,203,114,.28);
+  border-radius: 15px;
+  color: var(--book-text);
+  background:
+    radial-gradient(circle at 0 0, rgba(217,180,93,.11), transparent 48%),
+    rgba(12,13,16,.94);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 55px rgba(0,0,0,.42);
+}
+
+.book-player-dock-play {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(239,203,114,.30);
+  border-radius: 50%;
+  color: var(--book-gold-strong);
+  background: var(--book-gold-soft);
+  cursor: pointer;
+}
+
+.book-player-dock-info {
+  min-width: 0;
+}
+
+.book-player-dock-info strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #f1ead8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: .88rem;
+  font-weight: 500;
+}
+
+.book-player-dock-meta {
+  display: flex;
+  gap: 7px;
+  color: var(--book-muted);
+  font-size: .65rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.book-player-dock-open {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 9px;
+  padding: 8px 9px;
+  color: #d8d2c5;
+  background: rgba(255,255,255,.035);
+  font-size: .68rem;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.book-player-dock-open:hover {
+  color: var(--book-gold-strong);
+  border-color: rgba(239,203,114,.35);
+}
+
+.book-segment {
+  scroll-margin-top: 150px;
+}
+
+.book-text[hidden] + .book-bottom-nav {
+  margin-top: 34px;
+}
+
+@media (max-width: 700px) {
+  .book-player-options {
+    align-items: stretch;
+  }
+
+  .book-player-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .book-player-dock {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+  }
+}
+
   </style>
 </head>
 <body class="book-page">
@@ -423,12 +564,35 @@ body.book-page::before {
               </select>
             </label>
 
-            <label class="book-follow">
-              <input id="autoFollow" type="checkbox" checked aria-controls="bookText" aria-expanded="true">
-              <span>Acompanhar leitura</span>
-            </label>
+            <div class="book-player-actions">
+              <label class="book-follow">
+                <input id="autoFollow" type="checkbox" checked aria-controls="bookText" aria-expanded="true">
+                <span>Acompanhar leitura</span>
+              </label>
+
+              <button id="collapsePlayer" class="book-player-store" type="button" aria-controls="playerDock">
+                Guardar player ↓
+              </button>
+            </div>
           </div>
         </section>
+
+        <aside id="playerDock" class="book-player-dock" aria-label="Player compacto" aria-hidden="true" hidden>
+          <button id="dockPlayPause" class="book-player-dock-play" type="button" aria-label="Reproduzir áudio">▶</button>
+
+          <div class="book-player-dock-info">
+            <strong>🎧 Audiolivro</strong>
+            <div class="book-player-dock-meta">
+              <span id="dockAct">Ato I</span>
+              <span>•</span>
+              <span id="dockTime">00:00 / 00:00</span>
+            </div>
+          </div>
+
+          <button id="dockOpen" class="book-player-dock-open" type="button">
+            Abrir player ↑
+          </button>
+        </aside>
 
         <section id="bookText" class="book-text" aria-live="polite">
           <div class="book-loading">
