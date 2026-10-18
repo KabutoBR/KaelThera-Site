@@ -43,6 +43,7 @@
     activeId: null,
     lastFollowId: null,
     lastSaveMs: 0,
+    idleTimer: null,
     store: readStore()
   };
 
@@ -381,7 +382,7 @@
         if (el.chapterNow) el.chapterNow.textContent = cur.chapterTitle;
         if (el.autoFollow?.checked && node && state.lastFollowId !== cur.id) {
           state.lastFollowId = cur.id;
-          node.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          followNode(node);
         }
       }
     }
@@ -405,6 +406,9 @@
     const playing = !el.audio.paused && !el.audio.ended;
     if (el.playPause) el.playPause.textContent = playing ? '❚❚' : '▶';
     document.body.classList.toggle('is-playing', playing);
+
+    if (playing) schedulePlayerHide();
+    else showPlayerControls();
   }
 
   function updateNav() {
@@ -412,6 +416,71 @@
     if (el.prevActBottom) el.prevActBottom.disabled = state.actId === 1;
     if (el.nextAct) el.nextAct.disabled = state.actId === 10;
     if (el.nextActBottom) el.nextActBottom.disabled = state.actId === 10;
+  }
+
+  // "Acompanhar leitura" controla a visibilidade do texto e o auto-follow.
+  function applyReadingMode({ scrollToCurrent = false } = {}) {
+    const enabled = el.autoFollow ? el.autoFollow.checked : true;
+
+    document.body.classList.toggle('book-follow-enabled', enabled);
+
+    if (el.bookText) {
+      el.bookText.hidden = !enabled;
+      el.bookText.setAttribute('aria-hidden', enabled ? 'false' : 'true');
+    }
+
+    if (el.autoFollow) {
+      el.autoFollow.setAttribute('aria-expanded', enabled ? 'true' : 'false');
+    }
+
+    if (!enabled) {
+      showPlayerControls();
+      if (el.chapterNow) el.chapterNow.textContent = 'Modo somente áudio';
+      return;
+    }
+
+    if (scrollToCurrent && state.activeId) {
+      const node = document.getElementById(state.activeId);
+      if (node) followNode(node, true);
+    }
+
+    if (!el.audio.paused && !el.audio.ended) schedulePlayerHide();
+  }
+
+  // Mantém o trecho abaixo do player sticky, evitando sobreposição.
+  function followNode(node, immediate = false) {
+    if (!node || !el.autoFollow?.checked) return;
+
+    const rect = node.getBoundingClientRect();
+    const viewportTarget = window.innerHeight * (window.innerWidth <= 700 ? 0.68 : 0.64);
+    const top = Math.max(0, window.scrollY + rect.top - viewportTarget);
+
+    window.scrollTo({ top, behavior: immediate ? 'auto' : 'smooth' });
+  }
+
+  function showPlayerControls() {
+    if (state.idleTimer) {
+      clearTimeout(state.idleTimer);
+      state.idleTimer = null;
+    }
+    document.body.classList.remove('book-player-idle');
+  }
+
+  function schedulePlayerHide() {
+    showPlayerControls();
+    if (!el.autoFollow?.checked || el.audio.paused || el.audio.ended) return;
+
+    state.idleTimer = setTimeout(() => {
+      if (el.autoFollow?.checked && !el.audio.paused && !el.audio.ended) {
+        document.body.classList.add('book-player-idle');
+      }
+    }, 2600);
+  }
+
+  function registerPlayerActivity() {
+    if (!el.autoFollow?.checked) return;
+    showPlayerControls();
+    if (!el.audio.paused && !el.audio.ended) schedulePlayerHide();
   }
 
   function openSidebar() {
@@ -451,6 +520,7 @@
   el.autoFollow?.addEventListener('change', () => {
     state.store.autoFollow = el.autoFollow.checked;
     writeStore();
+    applyReadingMode({ scrollToCurrent: true });
   });
 
   el.audio.addEventListener('timeupdate', () => { updateProgress(); savePosition('timeupdate'); });
@@ -463,6 +533,10 @@
   el.closeSidebar?.addEventListener('click', closeSidebar);
   el.backdrop?.addEventListener('click', closeSidebar);
 
+  ['pointermove', 'pointerdown', 'touchstart', 'keydown'].forEach(eventName => {
+    document.addEventListener(eventName, registerPlayerActivity, { passive: true });
+  });
+
   window.addEventListener('pagehide', () => savePosition('pagehide', true));
   window.addEventListener('beforeunload', () => savePosition('beforeunload', true));
   document.addEventListener('visibilitychange', () => { if (document.hidden) savePosition('aba-oculta', true); });
@@ -471,6 +545,7 @@
   if (el.speed) el.speed.value = String(state.store.speed || 1);
   el.audio.playbackRate = Number(el.speed?.value || 1);
   if (el.autoFollow) el.autoFollow.checked = state.store.autoFollow !== false;
+  applyReadingMode();
 
   console.log('[Livro] localStorage:', storageAvailable() ? 'OK' : 'INDISPONÍVEL');
   console.log('[Livro] memória carregada:', JSON.stringify(state.store));
