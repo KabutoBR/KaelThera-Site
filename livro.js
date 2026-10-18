@@ -24,7 +24,9 @@
     prevActBottom: $('#prevActBottom'), nextActBottom: $('#nextActBottom'),
     currentTime: $('#currentTime'), duration: $('#duration'), progress: $('#progress'),
     speed: $('#speed'), autoFollow: $('#autoFollow'), sidebar: $('#bookSidebar'),
-    backdrop: $('#sidebarBackdrop'), toggleSidebar: $('#toggleSidebar'), closeSidebar: $('#closeSidebar')
+    backdrop: $('#sidebarBackdrop'), toggleSidebar: $('#toggleSidebar'), closeSidebar: $('#closeSidebar'),
+    player: $('.book-player'), collapsePlayer: $('#collapsePlayer'), playerDock: $('#playerDock'),
+    dockPlayPause: $('#dockPlayPause'), dockOpen: $('#dockOpen'), dockAct: $('#dockAct'), dockTime: $('#dockTime')
   };
 
   if (!el.audio || !el.bookText) {
@@ -43,12 +45,11 @@
     activeId: null,
     lastFollowId: null,
     lastSaveMs: 0,
-    idleTimer: null,
     store: readStore()
   };
 
   function defaultStore() {
-    return { currentActId: 1, positions: {}, speed: 1, autoFollow: true };
+    return { currentActId: 1, positions: {}, speed: 1, autoFollow: true, playerCollapsed: false };
   }
 
   function storageAvailable() {
@@ -72,7 +73,8 @@
         currentActId: Number.isInteger(x.currentActId) ? x.currentActId : 1,
         positions: x.positions && typeof x.positions === 'object' ? x.positions : {},
         speed: Number(x.speed) || 1,
-        autoFollow: x.autoFollow !== false
+        autoFollow: x.autoFollow !== false,
+        playerCollapsed: x.playerCollapsed === true
       };
     } catch (e) {
       console.warn('[Livro] memória inválida; iniciando limpa.', e);
@@ -399,16 +401,18 @@
     if (el.currentTime) el.currentTime.textContent = fmt(t);
     if (el.duration) el.duration.textContent = fmt(d);
     if (el.progress) el.progress.value = Number.isFinite(d) && d > 0 ? Math.round((t / d) * 1000) : 0;
+    if (el.dockTime) el.dockTime.textContent = `${fmt(t)} / ${fmt(d)}`;
     updateHighlight();
   }
 
   function updatePlay() {
     const playing = !el.audio.paused && !el.audio.ended;
     if (el.playPause) el.playPause.textContent = playing ? '❚❚' : '▶';
+    if (el.dockPlayPause) {
+      el.dockPlayPause.textContent = playing ? '❚❚' : '▶';
+      el.dockPlayPause.setAttribute('aria-label', playing ? 'Pausar áudio' : 'Reproduzir áudio');
+    }
     document.body.classList.toggle('is-playing', playing);
-
-    if (playing) schedulePlayerHide();
-    else showPlayerControls();
   }
 
   function updateNav() {
@@ -434,7 +438,6 @@
     }
 
     if (!enabled) {
-      showPlayerControls();
       if (el.chapterNow) el.chapterNow.textContent = 'Modo somente áudio';
       return;
     }
@@ -443,44 +446,42 @@
       const node = document.getElementById(state.activeId);
       if (node) followNode(node, true);
     }
-
-    if (!el.audio.paused && !el.audio.ended) schedulePlayerHide();
   }
 
-  // Mantém o trecho abaixo do player sticky, evitando sobreposição.
+  // Mantém o trecho abaixo do topo da tela quando o acompanhamento está ligado.
   function followNode(node, immediate = false) {
     if (!node || !el.autoFollow?.checked) return;
 
     const rect = node.getBoundingClientRect();
-    const viewportTarget = window.innerHeight * (window.innerWidth <= 700 ? 0.68 : 0.64);
+    const viewportTarget = window.innerHeight * (window.innerWidth <= 700 ? 0.42 : 0.38);
     const top = Math.max(0, window.scrollY + rect.top - viewportTarget);
 
     window.scrollTo({ top, behavior: immediate ? 'auto' : 'smooth' });
   }
 
-  function showPlayerControls() {
-    if (state.idleTimer) {
-      clearTimeout(state.idleTimer);
-      state.idleTimer = null;
+  function updatePlayerDock() {
+    if (el.dockAct) el.dockAct.textContent = `Ato ${actById(state.actId).roman}`;
+    if (el.dockTime) el.dockTime.textContent = `${fmt(el.audio.currentTime)} / ${fmt(el.audio.duration)}`;
+    updatePlay();
+  }
+
+  function setPlayerCollapsed(collapsed, { persist = true } = {}) {
+    const isCollapsed = Boolean(collapsed);
+    document.body.classList.toggle('book-player-collapsed', isCollapsed);
+
+    if (el.player) {
+      el.player.hidden = isCollapsed;
+      el.player.setAttribute('aria-hidden', isCollapsed ? 'true' : 'false');
     }
-    document.body.classList.remove('book-player-idle');
-  }
 
-  function schedulePlayerHide() {
-    showPlayerControls();
-    if (!el.autoFollow?.checked || el.audio.paused || el.audio.ended) return;
+    if (el.playerDock) {
+      el.playerDock.hidden = !isCollapsed;
+      el.playerDock.setAttribute('aria-hidden', isCollapsed ? 'false' : 'true');
+    }
 
-    state.idleTimer = setTimeout(() => {
-      if (el.autoFollow?.checked && !el.audio.paused && !el.audio.ended) {
-        document.body.classList.add('book-player-idle');
-      }
-    }, 2600);
-  }
-
-  function registerPlayerActivity() {
-    if (!el.autoFollow?.checked) return;
-    showPlayerControls();
-    if (!el.audio.paused && !el.audio.ended) schedulePlayerHide();
+    state.store.playerCollapsed = isCollapsed;
+    if (persist) writeStore();
+    updatePlayerDock();
   }
 
   function openSidebar() {
@@ -499,6 +500,9 @@
   }
 
   el.playPause?.addEventListener('click', () => el.audio.paused ? el.audio.play().catch(console.warn) : el.audio.pause());
+  el.dockPlayPause?.addEventListener('click', () => el.audio.paused ? el.audio.play().catch(console.warn) : el.audio.pause());
+  el.collapsePlayer?.addEventListener('click', () => setPlayerCollapsed(true));
+  el.dockOpen?.addEventListener('click', () => setPlayerCollapsed(false));
   el.prevAct?.addEventListener('click', () => openAct(state.actId - 1));
   el.prevActBottom?.addEventListener('click', () => openAct(state.actId - 1));
   el.nextAct?.addEventListener('click', () => openAct(state.actId + 1));
@@ -533,9 +537,6 @@
   el.closeSidebar?.addEventListener('click', closeSidebar);
   el.backdrop?.addEventListener('click', closeSidebar);
 
-  ['pointermove', 'pointerdown', 'touchstart', 'keydown'].forEach(eventName => {
-    document.addEventListener(eventName, registerPlayerActivity, { passive: true });
-  });
 
   window.addEventListener('pagehide', () => savePosition('pagehide', true));
   window.addEventListener('beforeunload', () => savePosition('beforeunload', true));
@@ -546,6 +547,7 @@
   el.audio.playbackRate = Number(el.speed?.value || 1);
   if (el.autoFollow) el.autoFollow.checked = state.store.autoFollow !== false;
   applyReadingMode();
+  setPlayerCollapsed(state.store.playerCollapsed === true, { persist: false });
 
   console.log('[Livro] localStorage:', storageAvailable() ? 'OK' : 'INDISPONÍVEL');
   console.log('[Livro] memória carregada:', JSON.stringify(state.store));
