@@ -6,9 +6,64 @@
       "titulo": "Capítulo 81: O Sorriso em Chamas e a Máscara de Orvalho (Ignis e Aqualis)",
       "trechos": [
         {
+          "id": "a9-c81-t1",
           "start": 8.551,
+          "end": 14.79,
+          "text": "A poeira mágica assentou-se, mas o mundo não voltou a ser o que era."
+        },
+        {
+          "id": "a9-c81-t2",
+          "start": 14.79,
+          "end": 19.542,
+          "text": "Da energia residual da Ruptura, nasceram os andarilhos de Kael Thera."
+        },
+        {
+          "id": "a9-c81-t3",
+          "start": 19.542,
+          "end": 23.518,
+          "text": "O autor deste códice os chama de Os 12 Sentimentos."
+        },
+        {
+          "id": "a9-c81-t4",
+          "start": 23.518,
+          "end": 33.772,
+          "text": "Eles assumiram a forma da inocência roubada de Aelion: pequenas figuras infantis, cobertas por ponchos pesados e com os rostos ocultos por máscaras de proporções exageradas."
+        },
+        {
+          "id": "a9-c81-t5",
+          "start": 33.772,
+          "end": 37.188,
+          "text": "A primeira que encontrei foi **Ignis, a Alegria**."
+        },
+        {
+          "id": "a9-c81-t6",
+          "start": 37.188,
+          "end": 44.711,
+          "text": "Usava um poncho vermelho e uma máscara de madeira clara com um sorriso gentil e olhos enormes, emanando um calor acolhedor."
+        },
+        {
+          "id": "a9-c81-t7",
+          "start": 44.711,
+          "end": 60.451,
+          "text": "Contudo, ao ser ameaçada, a sua dualidade despertou: a máscara sorridente derreteu em uma expressão de fúria distorcida, o poncho entrou em combustão e a pequena criança transformou-se em um inferno ambulante, lançando chamas incontroláveis."
+        },
+        {
+          "id": "a9-c81-t8",
+          "start": 60.451,
+          "end": 63.886,
+          "text": "Ao seu oposto, vagava **Aqualis, a Tristeza**."
+        },
+        {
+          "id": "a9-c81-t9",
+          "start": 63.886,
+          "end": 69.644,
+          "text": "Sua máscara tinha o formato de uma lágrima pálida e seu poncho parecia eternamente encharcado."
+        },
+        {
+          "id": "a9-c81-t10",
+          "start": 69.644,
           "end": 84.918,
-          "text": "A poeira mágica assentou-se, mas o mundo não voltou a ser o que era. Da energia residual da Ruptura, nasceram os andarilhos de Kael Thera. O autor deste códice os chama de Os 12 Sentimentos. Eles assumiram a forma da inocência roubada de Aelion: pequenas figuras infantis, cobertas por ponchos pesados e com os rostos ocultos por máscaras de proporções exageradas. A primeira que encontrei foi **Ignis, a Alegria**. Usava um poncho vermelho e uma máscara de madeira clara com um sorriso gentil e olhos enormes, emanando um calor acolhedor. Contudo, ao ser ameaçada, a sua dualidade despertou: a máscara sorridente derreteu em uma expressão de fúria distorcida, o poncho entrou em combustão e a pequena criança transformou-se em um inferno ambulante, lançando chamas incontroláveis. Ao seu oposto, vagava **Aqualis, a Tristeza**. Sua máscara tinha o formato de uma lágrima pálida e seu poncho parecia eternamente encharcado. Em seu estado pacífico, deixava um rastro de orvalho que fazia flores brotarem, mas quando o peso da sua melancolia transbordava, a máscara afundava em águas escuras, criando tempestades e uma aura de afogamento que sugava o ar dos pulmões de quem estivesse perto."
+          "text": "Em seu estado pacífico, deixava um rastro de orvalho que fazia flores brotarem, mas quando o peso da sua melancolia transbordava, a máscara afundava em águas escuras, criando tempestades e uma aura de afogamento que sugava o ar dos pulmões de quem estivesse perto."
         }
       ],
       "titulo_start": 3.366,
@@ -19,9 +74,64 @@
       "titulo": "Capítulo 82: A Criança de Tinta e o Rosto de Espinhos (Atramentum e Spina)",
       "trechos": [
         {
+          "id": "a9-c82-t1",
           "start": 90.51,
+          "end": 92.353,
+          "text": "O Códice registra a existência de sentimentos nascidos diretamente dos fracassos físicos de Aelion."
+        },
+        {
+          "id": "a9-c82-t2",
+          "start": 92.353,
+          "end": 98.196,
+          "text": "**Atramentum, a Frustração**, é talvez a visão mais melancólica."
+        },
+        {
+          "id": "a9-c82-t3",
+          "start": 98.196,
+          "end": 100.237,
+          "text": "É uma criança vestida com um poncho manchado de nanquim."
+        },
+        {
+          "id": "a9-c82-t4",
+          "start": 100.237,
+          "end": 112.512,
+          "text": "Sua máscara é uma tela em branco onde ela mesma tenta, repetidamente, desenhar olhos e boca com os dedos sujos de tinta preta, em um esforço eterno para treinar a firmeza das mãos e não errar o traço."
+        },
+        {
+          "id": "a9-c82-t5",
+          "start": 112.512,
+          "end": 117.756,
+          "text": "Mas, quando a lembrança do fracasso a domina, a máscara racha ao meio."
+        },
+        {
+          "id": "a9-c82-t6",
+          "start": 117.756,
+          "end": 122.217,
+          "text": "O corpinho infantil convulsiona e a criança explode em uma punição de tinta densa e escorregadia, cegando e corrompendo tudo ao redor."
+        },
+        {
+          "id": "a9-c82-t7",
+          "start": 122.217,
+          "end": 125.837,
+          "text": "Próxima a ela, costuma caçar **Spina, a Raiva**."
+        },
+        {
+          "id": "a9-c82-t8",
+          "start": 125.837,
+          "end": 132.095,
+          "text": "Seu poncho tem a textura de folhas secas e sua máscara é rubra, adornada com pequenos chifres."
+        },
+        {
+          "id": "a9-c82-t9",
+          "start": 132.095,
+          "end": 135.205,
+          "text": "Corre ativamente pelas ruínas, quebrando pedras."
+        },
+        {
+          "id": "a9-c82-t10",
+          "start": 135.205,
           "end": 142.571,
-          "text": "O Códice registra a existência de sentimentos nascidos diretamente dos fracassos físicos de Aelion. **Atramentum, a Frustração**, é talvez a visão mais melancólica. É uma criança vestida com um poncho manchado de nanquim. Sua máscara é uma tela em branco onde ela mesma tenta, repetidamente, desenhar olhos e boca com os dedos sujos de tinta preta, em um esforço eterno para treinar a firmeza das mãos e não errar o traço. Mas, quando a lembrança do fracasso a domina, a máscara racha ao meio. O corpinho infantil convulsiona e a criança explode em uma punição de tinta densa e escorregadia, cegando e corrompendo tudo ao redor. Próxima a ela, costuma caçar **Spina, a Raiva**. Seu poncho tem a textura de folhas secas e sua máscara é rubra, adornada com pequenos chifres. Corre ativamente pelas ruínas, quebrando pedras. Se provocada, a sua máscara gira para revelar uma face bestial, e a figura infantil dispara dezenas de espinhos perfurantes de forma cega, destruindo o próprio ambiente para punir o mundo."
+          "text": "Se provocada, a sua máscara gira para revelar uma face bestial, e a figura infantil dispara dezenas de espinhos perfurantes de forma cega, destruindo o próprio ambiente para punir o mundo."
         }
       ],
       "titulo_start": 85.532,
@@ -32,9 +142,46 @@
       "titulo": "Capítulo 83: Os Olhos no Escuro (Umbra)",
       "trechos": [
         {
+          "id": "a9-c83-t1",
           "start": 146.422,
+          "end": 147.471,
+          "text": "O medo inato do Primeiro de não pertencer ao mundo condensou-se em **Umbra**."
+        },
+        {
+          "id": "a9-c83-t2",
+          "start": 147.471,
+          "end": 153.903,
+          "text": "A criança do Medo veste o maior e mais pesado dos ponchos, um manto feito de sombras que se arrasta pelo chão."
+        },
+        {
+          "id": "a9-c83-t3",
+          "start": 153.903,
+          "end": 158.789,
+          "text": "Ela vive tentando se esconder atrás das paredes desmoronadas."
+        },
+        {
+          "id": "a9-c83-t4",
+          "start": 158.789,
+          "end": 159.673,
+          "text": "A sua máscara é branca, dominada por dois enormes buracos negros que imitam olhos arregalados de puro pavor."
+        },
+        {
+          "id": "a9-c83-t5",
+          "start": 159.673,
+          "end": 161.383,
+          "text": "Aproxime-se rápido demais, e a inocência se desfaz."
+        },
+        {
+          "id": "a9-c83-t6",
+          "start": 161.383,
+          "end": 165.658,
+          "text": "A máscara estilhaça, o manto negro se expande de forma desproporcional, transformando a silhueta da criança em um pesadelo altíssimo."
+        },
+        {
+          "id": "a9-c83-t7",
+          "start": 165.658,
           "end": 171.642,
-          "text": "O medo inato do Primeiro de não pertencer ao mundo condensou-se em **Umbra**. A criança do Medo veste o maior e mais pesado dos ponchos, um manto feito de sombras que se arrasta pelo chão. Ela vive tentando se esconder atrás das paredes desmoronadas. A sua máscara é branca, dominada por dois enormes buracos negros que imitam olhos arregalados de puro pavor. Aproxime-se rápido demais, e a inocência se desfaz. A máscara estilhaça, o manto negro se expande de forma desproporcional, transformando a silhueta da criança em um pesadelo altíssimo. A Umbra entra em paranoia, engolindo a luz do ambiente e projetando ilusões sombrias, forçando as suas vítimas a lutarem contra os seus próprios fantasmas na escuridão absoluta."
+          "text": "A Umbra entra em paranoia, engolindo a luz do ambiente e projetando ilusões sombrias, forçando as suas vítimas a lutarem contra os seus próprios fantasmas na escuridão absoluta."
         }
       ],
       "titulo_start": 143.338,
@@ -45,9 +192,46 @@
       "titulo": "Capítulo 84: A Prisão do Afeto (Vinculum)",
       "trechos": [
         {
+          "id": "a9-c84-t1",
           "start": 175.368,
+          "end": 181.606,
+          "text": "O desejo desesperado de Aelion por um abraço que não o rejeitasse moldou **Vinculum, o Apego**."
+        },
+        {
+          "id": "a9-c84-t2",
+          "start": 181.606,
+          "end": 185.145,
+          "text": "Veste um poncho entrelaçado por raízes vivas e vinhas de um tom rosa-pálido."
+        },
+        {
+          "id": "a9-c84-t3",
+          "start": 185.145,
+          "end": 190.073,
+          "text": "A máscara que usa tem traços suaves, com bochechas arredondadas, parecendo sempre implorar por atenção."
+        },
+        {
+          "id": "a9-c84-t4",
+          "start": 190.073,
+          "end": 196.28,
+          "text": "Segue os viajantes a uma distância segura, com passos curtos e pacíficos."
+        },
+        {
+          "id": "a9-c84-t5",
+          "start": 196.28,
+          "end": 198.621,
+          "text": "O perigo do Afeto, no entanto, reside na possessividade."
+        },
+        {
+          "id": "a9-c84-t6",
+          "start": 198.621,
+          "end": 204.025,
+          "text": "Quando a sua dualidade desperta sob o medo do abandono, a máscara amável deforma-se em um rosto de puro desespero."
+        },
+        {
+          "id": "a9-c84-t7",
+          "start": 204.025,
           "end": 215.825,
-          "text": "O desejo desesperado de Aelion por um abraço que não o rejeitasse moldou **Vinculum, o Apego**. Veste um poncho entrelaçado por raízes vivas e vinhas de um tom rosa-pálido. A máscara que usa tem traços suaves, com bochechas arredondadas, parecendo sempre implorar por atenção. Segue os viajantes a uma distância segura, com passos curtos e pacíficos. O perigo do Afeto, no entanto, reside na possessividade. Quando a sua dualidade desperta sob o medo do abandono, a máscara amável deforma-se em um rosto de puro desespero. As vinhas do poncho ganham vida, esticando-se violentamente para aprisionar o alvo em uma gaiola de raízes inquebráveis, drenando a energia vital da vítima sob a promessa distorcida de que \"nunca mais a deixará ir\"."
+          "text": "As vinhas do poncho ganham vida, esticando-se violentamente para aprisionar o alvo em uma gaiola de raízes inquebráveis, drenando a energia vital da vítima sob a promessa distorcida de que \"nunca mais a deixará ir\"."
         }
       ],
       "titulo_start": 172.508,
@@ -58,9 +242,46 @@
       "titulo": "Capítulo 85: A Máscara que Treme (Faisca)",
       "trechos": [
         {
+          "id": "a9-c85-t1",
           "start": 220.943,
+          "end": 224.058,
+          "text": "A exaustão das noites sem dormir do Primeiro deu à luz **Faisca, a Ansiedade**."
+        },
+        {
+          "id": "a9-c85-t2",
+          "start": 224.058,
+          "end": 232.047,
+          "text": "É uma criança hiperativa, coberta por um poncho cinzento que parece sempre estar arrepiado pela energia estática."
+        },
+        {
+          "id": "a9-c85-t3",
+          "start": 232.047,
+          "end": 243.058,
+          "text": "A sua máscara nunca fica parada; as mãos trêmulas do pequeno ser a ajustam a cada segundo, e os buracos dos olhos parecem vibrar em pânico."
+        },
+        {
+          "id": "a9-c85-t4",
+          "start": 243.058,
+          "end": 243.858,
+          "text": "Não consegue permanecer no mesmo lugar."
+        },
+        {
+          "id": "a9-c85-t5",
+          "start": 243.858,
+          "end": 249.239,
+          "text": "Quando a mente sobrecarregada que herdou entra em colapso, a tremedeira atinge o ápice."
+        },
+        {
+          "id": "a9-c85-t6",
+          "start": 249.239,
+          "end": 252.231,
+          "text": "A máscara se parte em linhas denteadas e o corpo infantil libera um campo elétrico violento."
+        },
+        {
+          "id": "a9-c85-t7",
+          "start": 252.231,
           "end": 261.42,
-          "text": "A exaustão das noites sem dormir do Primeiro deu à luz **Faisca, a Ansiedade**. É uma criança hiperativa, coberta por um poncho cinzento que parece sempre estar arrepiado pela energia estática. A sua máscara nunca fica parada; as mãos trêmulas do pequeno ser a ajustam a cada segundo, e os buracos dos olhos parecem vibrar em pânico. Não consegue permanecer no mesmo lugar. Quando a mente sobrecarregada que herdou entra em colapso, a tremedeira atinge o ápice. A máscara se parte em linhas denteadas e o corpo infantil libera um campo elétrico violento. Relâmpagos em área causam movimentos erráticos em qualquer músculo próximo, impedindo que os viajantes controlem as próprias pernas ou braços."
+          "text": "Relâmpagos em área causam movimentos erráticos em qualquer músculo próximo, impedindo que os viajantes controlem as próprias pernas ou braços."
         }
       ],
       "titulo_start": 217.059,
@@ -71,9 +292,40 @@
       "titulo": "Capítulo 86: O Guia Cego (Lux)",
       "trechos": [
         {
+          "id": "a9-c86-t1",
           "start": 263.909,
+          "end": 266.195,
+          "text": "Até mesmo os bons sentimentos foram corrompidos pela Ruptura."
+        },
+        {
+          "id": "a9-c86-t2",
+          "start": 266.195,
+          "end": 268.701,
+          "text": "**Lux, a Esperança**, caminha como uma criança envolta em um poncho que tece fios de luz dourada pura."
+        },
+        {
+          "id": "a9-c86-t3",
+          "start": 268.701,
+          "end": 277.892,
+          "text": "A sua máscara tem o formato de uma pequena coruja de porcelana, emitindo um cântico suave que traz conforto e guia os viajantes através da névoa."
+        },
+        {
+          "id": "a9-c86-t4",
+          "start": 277.892,
+          "end": 280.111,
+          "text": "Contudo, a Esperança de Aelion era a ilusão que o mantinha sofrendo."
+        },
+        {
+          "id": "a9-c86-t5",
+          "start": 280.111,
+          "end": 284.982,
+          "text": "Quando o seu lado obscuro assume, a máscara da coruja incandesce até obliterar a visão de quem a encara."
+        },
+        {
+          "id": "a9-c86-t6",
+          "start": 284.982,
           "end": 293.225,
-          "text": "Até mesmo os bons sentimentos foram corrompidos pela Ruptura. **Lux, a Esperança**, caminha como uma criança envolta em um poncho que tece fios de luz dourada pura. A sua máscara tem o formato de uma pequena coruja de porcelana, emitindo um cântico suave que traz conforto e guia os viajantes através da névoa. Contudo, a Esperança de Aelion era a ilusão que o mantinha sofrendo. Quando o seu lado obscuro assume, a máscara da coruja incandesce até obliterar a visão de quem a encara. A criança de luz para de guiar e passa a atrair; criando falsas saídas e miragens de calor, ela cega as vítimas para a realidade, conduzindo-as diretamente para abismos ou armadilhas letais com um passo inocente."
+          "text": "A criança de luz para de guiar e passa a atrair; criando falsas saídas e miragens de calor, ela cega as vítimas para a realidade, conduzindo-as diretamente para abismos ou armadilhas letais com um passo inocente."
         }
       ],
       "titulo_start": 262.491,
@@ -84,9 +336,46 @@
       "titulo": "Capítulo 87: A Criança de Chumbo (Gravitas)",
       "trechos": [
         {
+          "id": "a9-c87-t1",
           "start": 296.233,
+          "end": 304.11,
+          "text": "Para catalogar **Gravitas, a Culpa**, o meu antecessor precisou observar de longe, pois o chão ao redor deste sentimento está sempre afundando."
+        },
+        {
+          "id": "a9-c87-t2",
+          "start": 304.11,
+          "end": 306.37,
+          "text": "Ela veste um poncho que parece feito de musgo e pedra-pomes."
+        },
+        {
+          "id": "a9-c87-t3",
+          "start": 306.37,
+          "end": 310.541,
+          "text": "Caminha sempre de cabeça baixa, com os ombros curvados."
+        },
+        {
+          "id": "a9-c87-t4",
+          "start": 310.541,
+          "end": 312.318,
+          "text": "A sua máscara tem traços de pranto petrificado, espessa e cinzenta."
+        },
+        {
+          "id": "a9-c87-t5",
+          "start": 312.318,
+          "end": 314.651,
+          "text": "Ela representa o fardo de Aelion."
+        },
+        {
+          "id": "a9-c87-t6",
+          "start": 314.651,
+          "end": 320.473,
+          "text": "Se o sentimento for pressionado, a criança cai de joelhos e a sua máscara funde-se com a terra."
+        },
+        {
+          "id": "a9-c87-t7",
+          "start": 320.473,
           "end": 331.25,
-          "text": "Para catalogar **Gravitas, a Culpa**, o meu antecessor precisou observar de longe, pois o chão ao redor deste sentimento está sempre afundando. Ela veste um poncho que parece feito de musgo e pedra-pomes. Caminha sempre de cabeça baixa, com os ombros curvados. A sua máscara tem traços de pranto petrificado, espessa e cinzenta. Ela representa o fardo de Aelion. Se o sentimento for pressionado, a criança cai de joelhos e a sua máscara funde-se com a terra. O seu corpinho aumenta a própria densidade exponencialmente, gerando um campo gravitacional terrível que puxa tudo ao redor para o solo, esmagando ossos, madeira e pedra sob a justificativa de que todos devem carregar o mesmo peso."
+          "text": "O seu corpinho aumenta a própria densidade exponencialmente, gerando um campo gravitacional terrível que puxa tudo ao redor para o solo, esmagando ossos, madeira e pedra sob a justificativa de que todos devem carregar o mesmo peso."
         }
       ],
       "titulo_start": 293.539,
@@ -97,9 +386,58 @@
       "titulo": "Capítulo 88: O Abraço do Inverno (Glacies)",
       "trechos": [
         {
+          "id": "a9-c88-t1",
           "start": 334.198,
+          "end": 338.054,
+          "text": "O isolamento forçado dentro da redoma de âmbar condensou-se em **Glacies, a Solidão**."
+        },
+        {
+          "id": "a9-c88-t2",
+          "start": 338.054,
+          "end": 339.712,
+          "text": "Esta criança caminha tão levemente que não deixa pegadas."
+        },
+        {
+          "id": "a9-c88-t3",
+          "start": 339.712,
+          "end": 349.361,
+          "text": "O seu poncho é tecido com geada e vento gélido, e a máscara é de um cristal translúcido e sem expressões marcantes, apenas um vazio reflexivo."
+        },
+        {
+          "id": "a9-c88-t4",
+          "start": 349.361,
+          "end": 352.07,
+          "text": "Ela senta-se longe, nas bordas das colinas, apenas observando."
+        },
+        {
+          "id": "a9-c88-t5",
+          "start": 352.07,
+          "end": 354.293,
+          "text": "Mas não se aproxime."
+        },
+        {
+          "id": "a9-c88-t6",
+          "start": 354.293,
+          "end": 355.603,
+          "text": "O contato humano aterroriza a Solidão."
+        },
+        {
+          "id": "a9-c88-t7",
+          "start": 355.603,
+          "end": 360.224,
+          "text": "Quando ameaçada, a máscara de cristal quebra."
+        },
+        {
+          "id": "a9-c88-t8",
+          "start": 360.224,
+          "end": 364.499,
+          "text": "A criança emite um grito mudo que suga todo o calor do ar, conjurando uma nevasca do zero absoluto."
+        },
+        {
+          "id": "a9-c88-t9",
+          "start": 364.499,
           "end": 370.618,
-          "text": "O isolamento forçado dentro da redoma de âmbar condensou-se em **Glacies, a Solidão**. Esta criança caminha tão levemente que não deixa pegadas. O seu poncho é tecido com geada e vento gélido, e a máscara é de um cristal translúcido e sem expressões marcantes, apenas um vazio reflexivo. Ela senta-se longe, nas bordas das colinas, apenas observando. Mas não se aproxime. O contato humano aterroriza a Solidão. Quando ameaçada, a máscara de cristal quebra. A criança emite um grito mudo que suga todo o calor do ar, conjurando uma nevasca do zero absoluto. Ela congela o sangue nas veias, prendendo os invasores em blocos de gelo espessos para garantir que ela permaneça eternamente intocada."
+          "text": "Ela congela o sangue nas veias, prendendo os invasores em blocos de gelo espessos para garantir que ela permaneça eternamente intocada."
         }
       ],
       "titulo_start": 331.732,
@@ -110,9 +448,40 @@
       "titulo": "Capítulo 89: O Ladrão de Rostos (Speculum)",
       "trechos": [
         {
+          "id": "a9-c89-t1",
           "start": 373.403,
+          "end": 378.617,
+          "text": "O desejo amargo de ter um dom como os outros habitantes de Kael Thera gerou **Speculum, a Inveja**."
+        },
+        {
+          "id": "a9-c89-t2",
+          "start": 378.617,
+          "end": 384.433,
+          "text": "A criança não possui cor própria; seu poncho parece feito de cacos de espelho polido, refletindo a iluminação das ruínas."
+        },
+        {
+          "id": "a9-c89-t3",
+          "start": 384.433,
+          "end": 390.733,
+          "text": "A sua máscara, inicialmente, é perfeitamente lisa e sem rosto."
+        },
+        {
+          "id": "a9-c89-t4",
+          "start": 390.733,
+          "end": 397.5,
+          "text": "Quando passiva, ela acompanha os seres tentando imitar os seus movimentos físicos de maneira desajeitada e até cômica."
+        },
+        {
+          "id": "a9-c89-t5",
+          "start": 397.5,
+          "end": 401.007,
+          "text": "O horror ocorre na dualidade: a máscara lisa derrete e copia exatamente as feições da sua vítima."
+        },
+        {
+          "id": "a9-c89-t6",
+          "start": 401.007,
           "end": 411.649,
-          "text": "O desejo amargo de ter um dom como os outros habitantes de Kael Thera gerou **Speculum, a Inveja**. A criança não possui cor própria; seu poncho parece feito de cacos de espelho polido, refletindo a iluminação das ruínas. A sua máscara, inicialmente, é perfeitamente lisa e sem rosto. Quando passiva, ela acompanha os seres tentando imitar os seus movimentos físicos de maneira desajeitada e até cômica. O horror ocorre na dualidade: a máscara lisa derrete e copia exatamente as feições da sua vítima. Ao fazer isso, Speculum deixa de imitar e passa a roubar, drenando os dons, a vida ou a força do alvo, tornando-se temporariamente uma cópia melhorada e distorcida daquele que a encontrou."
+          "text": "Ao fazer isso, Speculum deixa de imitar e passa a roubar, drenando os dons, a vida ou a força do alvo, tornando-se temporariamente uma cópia melhorada e distorcida daquele que a encontrou."
         }
       ],
       "titulo_start": 371.434,
@@ -123,9 +492,52 @@
       "titulo": "Capítulo 90: O Transe Dourado (Aura)",
       "trechos": [
         {
+          "id": "a9-c90-t1",
           "start": 414.419,
+          "end": 418.99,
+          "text": "O último dos grandes sentimentos a se manifestar no Códice é **Aura, a Nostalgia**."
+        },
+        {
+          "id": "a9-c90-t2",
+          "start": 418.99,
+          "end": 426.823,
+          "text": "Ela veste o mais belo dos ponchos, adornado com padrões que lembram as asas de uma mariposa imperial."
+        },
+        {
+          "id": "a9-c90-t3",
+          "start": 426.823,
+          "end": 432.352,
+          "text": "A sua máscara é serena, banhada na cor das antigas Cidades de Raiz antes da queda."
+        },
+        {
+          "id": "a9-c90-t4",
+          "start": 432.352,
+          "end": 436.712,
+          "text": "Ela exala um pólen que cheira à infância perdida e à perfeição."
+        },
+        {
+          "id": "a9-c90-t5",
+          "start": 436.712,
+          "end": 440.705,
+          "text": "É um sentimento dócil, mas a sua dualidade não é violenta; é insidiosa."
+        },
+        {
+          "id": "a9-c90-t6",
+          "start": 440.705,
+          "end": 449.38,
+          "text": "Se você inalar a poeira que se solta do seu poncho quando ela bate os bracinhos, a máscara serena aprofunda o seu transe."
+        },
+        {
+          "id": "a9-c90-t7",
+          "start": 449.38,
+          "end": 452.853,
+          "text": "A vítima esquece o frio, o perigo e o presente."
+        },
+        {
+          "id": "a9-c90-t8",
+          "start": 452.853,
           "end": 462.28,
-          "text": "O último dos grandes sentimentos a se manifestar no Códice é **Aura, a Nostalgia**. Ela veste o mais belo dos ponchos, adornado com padrões que lembram as asas de uma mariposa imperial. A sua máscara é serena, banhada na cor das antigas Cidades de Raiz antes da queda. Ela exala um pólen que cheira à infância perdida e à perfeição. É um sentimento dócil, mas a sua dualidade não é violenta; é insidiosa. Se você inalar a poeira que se solta do seu poncho quando ela bate os bracinhos, a máscara serena aprofunda o seu transe. A vítima esquece o frio, o perigo e o presente. Fica paralisada, presa dentro de suas próprias lembranças favoritas, sorrindo e definhando de fome enquanto a Criança de Máscara caminha suavemente de volta para a névoa."
+          "text": "Fica paralisada, presa dentro de suas próprias lembranças favoritas, sorrindo e definhando de fome enquanto a Criança de Máscara caminha suavemente de volta para a névoa."
         }
       ],
       "titulo_start": 412.052,
